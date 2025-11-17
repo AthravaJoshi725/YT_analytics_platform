@@ -1,0 +1,10 @@
+# Created a project strucutre first
+ - app.py for streamlit ui
+ - yt_comments for yt comment extraction
+ - services folder 
+    - models  for loading and managing models
+    - analysis for function
+    - utils - common helper functions
+ - Notebooks folder for testing
+
+ 

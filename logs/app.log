@@ -1,0 +1,1065 @@
+2025-11-02 19:27:34,303 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-02 20:32:27,833 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-02 22:27:58,111 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:17:24,871 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:24:09,663 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:24:28,196 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:25:23,649 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:26:00,685 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:39:27,091 - root - INFO - Extracted videoID: OLY2coSRf7g from link of TYPE_2: https://youtu.be/OLY2coSRf7g?si=X4o4XE-_K8BnEY74
+2025-11-03 21:39:27,109 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 21:39:28,111 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-03 22:06:10,298 - root - INFO - Extracted videoID: XvUSsh3gdO4 from link of TYPE_2: https://youtu.be/XvUSsh3gdO4?si=8s-AkABkvUsZRF7T
+2025-11-03 22:06:10,314 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-03 22:06:11,492 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-04 21:39:54,846 - root - INFO - Extracted videoID: H58vbez_m4E from link of TYPE_2: https://youtu.be/H58vbez_m4E?si=PALkU-MD6o-pLutT
+2025-11-04 21:39:54,859 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:39:56,585 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-04 21:43:06,395 - root - INFO - Extracted videoID: H58vbez_m4E from link of TYPE_2: https://youtu.be/H58vbez_m4E?si=PALkU-MD6o-pLutT
+2025-11-04 21:43:06,404 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:43:08,278 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-04 21:45:35,329 - root - ERROR - Invalid YouTube link format: def get_percentage(labels):     counts = Counter(label for label in labels)     total = sum(counts.values())     percentages = {k: round(v / total * 100, 2) for k, v in counts.items()}     return percentages
+2025-11-04 21:45:35,342 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:45:36,843 - root - ERROR - Error while fetching comments for video ID None: <HttpError 400 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "No filter selected. Expected one of: allThreadsRelatedToChannelId, channelId, id, postId, videoId". Details: "[{'message': 'No filter selected. Expected one of: allThreadsRelatedToChannelId, channelId, id, postId, videoId', 'domain': 'youtube.parameter', 'reason': 'missingRequiredParameter', 'location': 'parameters.', 'locationType': 'other'}]">
+2025-11-04 21:45:46,729 - root - INFO - Extracted videoID: QCUJgh3NiUI from link of TYPE_2: https://youtu.be/QCUJgh3NiUI?si=ipyMueNMAWeUIezu
+2025-11-04 21:45:46,734 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:45:48,137 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-04 21:45:48,138 - root - ERROR - Error while fetching comments for video ID QCUJgh3NiUI: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&videoId=QCUJgh3NiUI&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-04 21:48:30,650 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_2: https://youtu.be/bz-rVtATmqA?si=Qe7cmfQNNgKZvDR6
+2025-11-04 21:48:30,654 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:48:32,188 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-04 21:48:32,189 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&videoId=bz-rVtATmqA&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-04 21:48:52,171 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_2: https://youtu.be/bz-rVtATmqA?si=Qe7cmfQNNgKZvDR6
+2025-11-04 21:48:52,176 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:48:53,522 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-04 21:48:53,524 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&videoId=bz-rVtATmqA&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-04 21:48:56,440 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-04 21:48:56,444 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:48:57,854 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-04 21:48:57,855 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&videoId=bz-rVtATmqA&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-04 21:50:01,799 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-04 21:50:01,802 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:50:02,577 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-04 21:50:02,578 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&videoId=bz-rVtATmqA&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-04 21:50:18,889 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-04 21:50:18,897 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-04 21:50:20,303 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-04 21:50:20,304 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=id%2Creplies%2Csnippet&videoId=bz-rVtATmqA&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-05 11:13:48,140 - root - INFO - Extracted videoID: cfkXQWQfyKo from link of TYPE_2: https://youtu.be/cfkXQWQfyKo?si=oqCkGYKheOyXbNmL
+2025-11-05 11:13:48,173 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 11:13:50,225 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 11:14:05,336 - root - INFO - Extracted videoID: cfkXQWQfyKo from link of TYPE_2: https://youtu.be/cfkXQWQfyKo?si=oqCkGYKheOyXbNmL
+2025-11-05 11:14:05,351 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 11:14:07,221 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 11:16:02,385 - root - INFO - Extracted videoID: cfkXQWQfyKo from link of TYPE_2: https://youtu.be/cfkXQWQfyKo?si=oqCkGYKheOyXbNmL
+2025-11-05 11:16:02,418 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 11:16:04,161 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 11:39:48,646 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-05 11:39:48,649 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 11:39:49,773 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 11:40:26,587 - root - INFO - Extracted videoID: zt28lV7EKPI from link of TYPE_2: https://youtu.be/zt28lV7EKPI?si=h-n6flD6xBbHKiyH
+2025-11-05 11:40:26,591 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 11:40:27,393 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 17:49:50,336 - root - INFO - Extracted videoID: EFzSsJMupYM from link of TYPE_2: https://youtu.be/EFzSsJMupYM?si=rq8YzJHZDFiN5y0X
+2025-11-05 17:49:50,357 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 17:49:52,096 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 17:51:32,882 - root - INFO - Extracted videoID: EFzSsJMupYM from link of TYPE_2: https://youtu.be/EFzSsJMupYM?si=rq8YzJHZDFiN5y0X
+2025-11-05 17:51:32,893 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 17:51:33,983 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 18:21:49,299 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-05 18:21:49,304 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 18:21:52,110 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-05 18:23:08,046 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-05 18:23:08,051 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-05 18:23:08,901 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 10:53:29,244 - root - INFO - Extracted videoID: rRyafSyCr8s from link of TYPE_2: https://youtu.be/rRyafSyCr8s?si=fm28cPEcExYM0fIu
+2025-11-06 10:53:29,262 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 10:53:31,165 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:16:52,399 - root - INFO - Extracted videoID: dQw4w9WgXcQ from link of TYPE_1: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+2025-11-06 12:16:52,411 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 12:16:53,253 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:32:02,788 - root - INFO - Extracted videoID: dQw4w9WgXcQ from link of TYPE_1: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+2025-11-06 12:32:02,807 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 12:32:03,693 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:32:57,559 - root - INFO - Extracted videoID: dQw4w9WgXcQ from link of TYPE_1: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+2025-11-06 12:32:57,565 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 12:32:58,272 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:36:56,331 - root - INFO - Extracted videoID: dQw4w9WgXcQ from link of TYPE_1: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+2025-11-06 12:36:56,340 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 12:36:57,274 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:37:52,012 - root - INFO - Extracted videoID: dQw4w9WgXcQ from link of TYPE_1: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+2025-11-06 12:37:52,023 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 12:37:52,776 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:38:00,244 - root - INFO - Starting spam detection...
+2025-11-06 12:38:00,394 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 12:52:47,102 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=I2tE8WNmxhdMddak
+2025-11-06 12:52:47,106 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 12:52:47,864 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 12:52:47,912 - root - INFO - Starting spam detection...
+2025-11-06 12:52:48,041 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 15:58:19,099 - root - INFO - Extracted videoID: iDqSKfIQ-q4 from link of TYPE_2: https://youtu.be/iDqSKfIQ-q4?si=j00DmKww4WuYAHgB
+2025-11-06 15:58:19,104 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 15:58:19,926 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 15:58:22,861 - root - INFO - Extracted videoID: iDqSKfIQ-q4 from link of TYPE_2: https://youtu.be/iDqSKfIQ-q4?si=j00DmKww4WuYAHgB
+2025-11-06 15:58:22,863 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 15:58:23,880 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 15:58:23,940 - root - INFO - Starting spam detection...
+2025-11-06 15:58:24,009 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 15:59:29,803 - root - INFO - Extracted videoID: F1RVFlCWPL4 from link of TYPE_2: https://youtu.be/F1RVFlCWPL4?si=UnXPyuSb1sT7yEYl
+2025-11-06 15:59:29,806 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 15:59:31,668 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 15:59:31,705 - root - INFO - Starting spam detection...
+2025-11-06 15:59:31,771 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 16:00:18,710 - root - INFO - Extracted videoID: wjZFArBo0bE from link of TYPE_2: https://youtu.be/wjZFArBo0bE?si=Bqx3dqzugak6AAxo
+2025-11-06 16:00:18,713 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:00:19,484 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 16:00:19,525 - root - INFO - Starting spam detection...
+2025-11-06 16:00:19,585 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 16:01:12,714 - root - INFO - Extracted videoID: t5OKlU0icRs from link of TYPE_2: https://youtu.be/t5OKlU0icRs?si=FDCwG9nFJwEvErGl
+2025-11-06 16:01:12,717 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:01:13,526 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 16:01:13,591 - root - INFO - Starting spam detection...
+2025-11-06 16:01:13,645 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 16:06:23,313 - root - INFO - Extracted videoID: t5OKlU0icRs from link of TYPE_2: https://youtu.be/t5OKlU0icRs?si=FDCwG9nFJwEvErGl
+2025-11-06 16:06:23,316 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:06:24,501 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 16:06:24,550 - root - INFO - Starting spam detection...
+2025-11-06 16:06:24,625 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 16:13:31,833 - root - INFO - Extracted videoID: t5OKlU0icRs from link of TYPE_2: https://youtu.be/t5OKlU0icRs?si=FDCwG9nFJwEvErGl
+2025-11-06 16:13:31,839 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:14:03,441 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 16:14:03,527 - root - INFO - Starting spam detection...
+2025-11-06 16:14:03,748 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 16:15:22,587 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:15:22,593 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:15:28,354 - root - INFO - Parsed 20 comments from response and converted to dataframe.
+2025-11-06 16:15:28,425 - root - INFO - Starting spam detection...
+2025-11-06 16:15:28,631 - root - INFO - Spam detection completed for 20 comments.
+2025-11-06 16:21:59,780 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:21:59,797 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:21:59,810 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:21:59,811 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:22:37,485 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:22:37,491 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:22:37,500 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:22:37,501 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:22:51,744 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:22:51,755 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:22:51,765 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:22:51,767 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:23:04,629 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:23:04,637 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:23:04,645 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:23:04,646 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:24:26,208 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-06 16:24:26,218 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:24:28,177 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-06 16:24:28,177 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=bz-rVtATmqA&maxResults=100&textFormat=plainText&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-06 16:24:28,178 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:27:27,285 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-06 16:27:27,296 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:27:29,133 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-06 16:27:29,134 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=bz-rVtATmqA&maxResults=100&textFormat=plainText&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-06 16:27:29,135 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:34:02,617 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-06 16:34:02,627 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:34:04,148 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-06 16:34:04,149 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=bz-rVtATmqA&maxResults=100&textFormat=plainText&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-06 16:34:04,149 - root - INFO - Parsed 0 comments from response and converted to dataframe.
+2025-11-06 16:34:30,738 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:34:30,744 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:34:30,937 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:34:30,939 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:34:36,583 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:34:36,589 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:34:36,598 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:34:36,599 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:35:03,790 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:35:03,797 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:35:03,806 - root - ERROR - Error while fetching comments for video ID okh85F29Gjg: Got an unexpected keyword argument text_format
+2025-11-06 16:35:03,806 - root - ERROR - Error while parsing comments: 'list' object has no attribute 'get'
+2025-11-06 16:35:56,514 - root - INFO - Extracted videoID: okh85F29Gjg from link of TYPE_2: https://youtu.be/okh85F29Gjg?si=la5pd_z_vaZZ8qMW
+2025-11-06 16:35:56,527 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-06 16:36:05,123 - root - INFO - Parsed 91 comments from response and converted to dataframe.
+2025-11-06 16:36:49,794 - root - INFO - Starting spam detection...
+2025-11-06 16:36:50,636 - root - INFO - Spam detection completed for 91 comments.
+2025-11-08 22:03:30,269 - root - INFO - Starting sentiment analysis...
+2025-11-08 22:03:30,977 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-08 22:03:30,977 - root - INFO - Starting emotion analysis...
+2025-11-08 22:03:31,285 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-08 22:03:31,286 - root - INFO - Starting spam detection...
+2025-11-08 22:03:31,327 - root - INFO - Spam detection completed for 4 comments.
+2025-11-08 22:03:31,328 - root - INFO - Starting adjective extraction
+2025-11-08 22:03:31,534 - root - INFO - Ajective extraction completed.
+2025-11-09 17:44:26,580 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-09 17:44:26,596 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-09 17:46:02,653 - root - INFO - Parsed 15234 comments from response and converted to dataframe.
+2025-11-09 17:46:02,689 - root - INFO - Starting sentiment analysis...
+2025-11-09 17:46:04,207 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (625) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 625].  Tensor sizes: [1, 514]
+2025-11-10 16:32:29,704 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:32:30,308 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-10 16:32:30,308 - root - INFO - Starting emotion analysis...
+2025-11-10 16:32:30,580 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-10 16:32:30,580 - root - INFO - Starting spam detection...
+2025-11-10 16:32:30,591 - root - INFO - Spam detection completed for 4 comments.
+2025-11-10 16:32:30,591 - root - INFO - Starting adjective extraction
+2025-11-10 16:32:30,591 - root - ERROR - Error during adjective extraction: 'list' object has no attribute 'astype'
+2025-11-10 16:33:33,738 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:33:34,115 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-10 16:33:34,115 - root - INFO - Starting emotion analysis...
+2025-11-10 16:33:34,298 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-10 16:33:34,299 - root - INFO - Starting spam detection...
+2025-11-10 16:33:34,307 - root - INFO - Spam detection completed for 4 comments.
+2025-11-10 16:33:34,308 - root - INFO - Starting adjective extraction
+2025-11-10 16:33:34,308 - root - ERROR - Error during adjective extraction: 'list' object has no attribute 'astype'
+2025-11-10 16:34:37,771 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:34:37,978 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-10 16:34:37,978 - root - INFO - Starting emotion analysis...
+2025-11-10 16:34:38,170 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-10 16:34:38,171 - root - INFO - Starting spam detection...
+2025-11-10 16:34:38,204 - root - INFO - Spam detection completed for 4 comments.
+2025-11-10 16:34:38,204 - root - INFO - Starting adjective extraction
+2025-11-10 16:34:38,382 - root - INFO - Ajective extraction completed.
+2025-11-10 16:39:22,034 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=eCGKbrJ8gAIo0wWo
+2025-11-10 16:39:22,050 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 16:39:23,026 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 16:39:23,031 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:39:23,481 - root - INFO - Sentiment analysis completed for 52 comments.
+2025-11-10 16:45:20,310 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=eCGKbrJ8gAIo0wWo
+2025-11-10 16:45:20,312 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 16:45:20,956 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 16:45:20,968 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:45:22,747 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 16:51:42,267 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=eCGKbrJ8gAIo0wWo
+2025-11-10 16:51:42,271 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 16:51:42,916 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 16:51:42,919 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:51:45,508 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 16:51:45,508 - root - INFO - Starting emotion analysis...
+2025-11-10 16:51:46,996 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 16:53:57,776 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=eCGKbrJ8gAIo0wWo
+2025-11-10 16:53:57,780 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 16:53:58,488 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 16:53:58,490 - root - INFO - Starting sentiment analysis...
+2025-11-10 16:54:01,737 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 16:54:01,738 - root - INFO - Starting emotion analysis...
+2025-11-10 16:54:03,275 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 16:54:03,276 - root - INFO - Starting spam detection...
+2025-11-10 16:54:03,390 - root - INFO - Spam detection completed for 52 comments.
+2025-11-10 16:54:03,391 - root - INFO - Starting adjective extraction
+2025-11-10 16:54:03,589 - root - INFO - Ajective extraction completed.
+2025-11-10 18:50:52,423 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=oZCyow1HIDuXMdSV
+2025-11-10 18:50:52,426 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 18:50:53,290 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 18:50:53,291 - root - INFO - Starting sentiment analysis...
+2025-11-10 18:50:55,768 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 18:50:55,768 - root - INFO - Starting emotion analysis...
+2025-11-10 18:50:56,812 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 18:50:56,812 - root - INFO - Starting spam detection...
+2025-11-10 18:50:56,904 - root - INFO - Spam detection completed for 52 comments.
+2025-11-10 18:50:56,904 - root - INFO - Starting adjective extraction
+2025-11-10 18:50:57,068 - root - INFO - Ajective extraction completed.
+2025-11-10 18:56:51,163 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=oZCyow1HIDuXMdSV
+2025-11-10 18:56:51,166 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 18:56:52,217 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 18:56:52,218 - root - INFO - Extracted videoID: W6rhC2Ny6-I from link of TYPE_2: https://youtu.be/W6rhC2Ny6-I?si=oZCyow1HIDuXMdSV
+2025-11-10 18:56:52,219 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 18:56:52,692 - root - INFO - Parsed 52 comments from response and converted to dataframe.
+2025-11-10 18:56:52,693 - root - INFO - Starting sentiment analysis...
+2025-11-10 18:56:54,685 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 18:56:54,685 - root - INFO - Starting emotion analysis...
+2025-11-10 18:56:55,652 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (565) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 565].  Tensor sizes: [1, 514]
+2025-11-10 18:56:55,652 - root - INFO - Starting spam detection...
+2025-11-10 18:56:55,655 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 18:56:55,655 - root - INFO - Starting adjective extraction
+2025-11-10 18:56:55,817 - root - INFO - Ajective extraction completed.
+2025-11-10 18:58:31,167 - root - INFO - Extracted videoID: fyBz4ZbmeZU from link of TYPE_2: https://youtu.be/fyBz4ZbmeZU?si=ZD2-hyy0XF2QpaiP
+2025-11-10 18:58:31,171 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 18:58:41,584 - root - INFO - Parsed 2049 comments from response and converted to dataframe.
+2025-11-10 18:58:41,588 - root - INFO - Extracted videoID: fyBz4ZbmeZU from link of TYPE_2: https://youtu.be/fyBz4ZbmeZU?si=ZD2-hyy0XF2QpaiP
+2025-11-10 18:58:41,591 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 18:58:51,786 - root - INFO - Parsed 2050 comments from response and converted to dataframe.
+2025-11-10 18:58:51,789 - root - INFO - Starting sentiment analysis...
+2025-11-10 18:59:04,416 - root - ERROR - Error during sentiment analysis: The expanded size of the tensor (736) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 736].  Tensor sizes: [1, 514]
+2025-11-10 18:59:04,417 - root - INFO - Starting emotion analysis...
+2025-11-10 18:59:11,842 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (736) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 736].  Tensor sizes: [1, 514]
+2025-11-10 18:59:11,843 - root - INFO - Starting spam detection...
+2025-11-10 18:59:11,845 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 18:59:11,846 - root - INFO - Starting adjective extraction
+2025-11-10 18:59:12,873 - root - INFO - Ajective extraction completed.
+2025-11-10 19:09:54,251 - root - INFO - Extracted videoID: fyBz4ZbmeZU from link of TYPE_2: https://youtu.be/fyBz4ZbmeZU?si=ZD2-hyy0XF2QpaiP
+2025-11-10 19:09:54,253 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:10:12,519 - root - INFO - Parsed 2056 comments from response and converted to dataframe.
+2025-11-10 19:10:12,522 - root - INFO - Extracted videoID: fyBz4ZbmeZU from link of TYPE_2: https://youtu.be/fyBz4ZbmeZU?si=ZD2-hyy0XF2QpaiP
+2025-11-10 19:10:12,523 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:10:28,867 - root - INFO - Parsed 2056 comments from response and converted to dataframe.
+2025-11-10 19:10:28,870 - root - INFO - Starting sentiment analysis...
+2025-11-10 19:12:26,981 - root - INFO - Sentiment analysis completed for 2056 comments.
+2025-11-10 19:12:26,982 - root - INFO - Starting emotion analysis...
+2025-11-10 19:12:34,584 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (736) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 736].  Tensor sizes: [1, 514]
+2025-11-10 19:12:34,585 - root - INFO - Starting spam detection...
+2025-11-10 19:12:34,590 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 19:12:34,590 - root - INFO - Starting adjective extraction
+2025-11-10 19:12:35,545 - root - INFO - Ajective extraction completed.
+2025-11-10 19:19:58,166 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:19:58,168 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:20:00,905 - root - INFO - Parsed 289 comments from response and converted to dataframe.
+2025-11-10 19:20:00,906 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:20:00,907 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:20:03,118 - root - INFO - Parsed 289 comments from response and converted to dataframe.
+2025-11-10 19:20:03,120 - root - INFO - Starting sentiment analysis...
+2025-11-10 19:20:21,919 - root - INFO - Sentiment analysis completed for 289 comments.
+2025-11-10 19:20:21,919 - root - INFO - Starting emotion analysis...
+2025-11-10 19:20:31,269 - root - INFO - Emotion analysis completed for 289 comments.
+2025-11-10 19:20:31,270 - root - INFO - Starting spam detection...
+2025-11-10 19:20:31,273 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 19:20:31,273 - root - INFO - Starting adjective extraction
+2025-11-10 19:20:31,465 - root - INFO - Ajective extraction completed.
+2025-11-10 19:21:48,851 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:21:48,854 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:21:51,504 - root - INFO - Parsed 289 comments from response and converted to dataframe.
+2025-11-10 19:21:51,505 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:21:51,506 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:21:53,708 - root - INFO - Parsed 289 comments from response and converted to dataframe.
+2025-11-10 19:21:53,710 - root - INFO - Starting sentiment analysis...
+2025-11-10 19:22:10,571 - root - INFO - Sentiment analysis completed for 289 comments.
+2025-11-10 19:22:10,572 - root - INFO - Starting emotion analysis...
+2025-11-10 19:22:19,238 - root - INFO - Emotion analysis completed for 289 comments.
+2025-11-10 19:22:19,239 - root - INFO - Starting spam detection...
+2025-11-10 19:22:19,242 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 19:22:19,242 - root - INFO - Starting adjective extraction
+2025-11-10 19:22:19,540 - root - INFO - Ajective extraction completed.
+2025-11-10 19:23:43,486 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:23:43,488 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:23:45,850 - root - INFO - Parsed 290 comments from response and converted to dataframe.
+2025-11-10 19:23:45,851 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:23:45,852 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:23:47,947 - root - INFO - Parsed 290 comments from response and converted to dataframe.
+2025-11-10 19:23:47,948 - root - INFO - Starting sentiment analysis...
+2025-11-10 19:24:04,058 - root - INFO - Sentiment analysis completed for 290 comments.
+2025-11-10 19:24:04,058 - root - INFO - Starting emotion analysis...
+2025-11-10 19:24:12,318 - root - INFO - Emotion analysis completed for 290 comments.
+2025-11-10 19:24:12,318 - root - INFO - Starting spam detection...
+2025-11-10 19:24:12,321 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 19:24:12,321 - root - INFO - Starting adjective extraction
+2025-11-10 19:24:12,486 - root - INFO - Ajective extraction completed.
+2025-11-10 19:29:30,686 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:29:30,688 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:29:32,931 - root - INFO - Parsed 290 comments from response and converted to dataframe.
+2025-11-10 19:29:32,932 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=dyj_As0fCJMxTtlk
+2025-11-10 19:29:32,934 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 19:29:35,034 - root - INFO - Parsed 290 comments from response and converted to dataframe.
+2025-11-10 19:29:35,035 - root - INFO - Starting sentiment analysis...
+2025-11-10 19:29:54,831 - root - INFO - Sentiment analysis completed for 290 comments.
+2025-11-10 19:29:54,832 - root - INFO - Starting emotion analysis...
+2025-11-10 19:30:04,795 - root - INFO - Emotion analysis completed for 290 comments.
+2025-11-10 19:30:04,795 - root - INFO - Starting spam detection...
+2025-11-10 19:30:04,798 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 19:30:04,798 - root - INFO - Starting adjective extraction
+2025-11-10 19:30:05,078 - root - INFO - Ajective extraction completed.
+2025-11-10 20:38:37,355 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-10 20:38:37,359 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 20:41:11,101 - root - INFO - Fetched 15262 comments for video ID 5KmpT-BoVf4
+2025-11-10 20:41:11,112 - root - INFO - Parsed 15262 comments from response and converted to dataframe.
+2025-11-10 20:41:11,122 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-10 20:41:11,122 - root - INFO - Loading comments from cache: 5KmpT-BoVf4
+2025-11-10 22:14:39,598 - root - INFO - Extracted videoID: fyBz4ZbmeZU from link of TYPE_2: https://youtu.be/fyBz4ZbmeZU?si=ZD2-hyy0XF2QpaiP
+2025-11-10 22:14:39,602 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 22:14:58,653 - root - INFO - Fetched 2177 comments for video ID fyBz4ZbmeZU
+2025-11-10 22:14:58,655 - root - INFO - Parsed 2177 comments from response and converted to dataframe.
+2025-11-10 22:14:58,659 - root - INFO - Extracted videoID: fyBz4ZbmeZU from link of TYPE_2: https://youtu.be/fyBz4ZbmeZU?si=ZD2-hyy0XF2QpaiP
+2025-11-10 22:14:58,659 - root - INFO - Loading comments from cache: fyBz4ZbmeZU
+2025-11-10 22:14:58,662 - root - INFO - Parsed 2177 comments from response and converted to dataframe.
+2025-11-10 22:14:58,665 - root - INFO - Starting sentiment analysis...
+2025-11-10 22:16:55,519 - root - INFO - Sentiment analysis completed for 2177 comments.
+2025-11-10 22:16:55,519 - root - INFO - Starting emotion analysis...
+2025-11-10 22:17:06,184 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (736) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 736].  Tensor sizes: [1, 514]
+2025-11-10 22:17:06,184 - root - INFO - Starting spam detection...
+2025-11-10 22:17:06,188 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 22:17:06,189 - root - INFO - Starting adjective extraction
+2025-11-10 22:17:07,203 - root - INFO - Ajective extraction completed.
+2025-11-10 22:17:15,757 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-10 22:17:15,758 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 22:19:30,011 - root - INFO - Fetched 15269 comments for video ID 5KmpT-BoVf4
+2025-11-10 22:19:30,056 - root - INFO - Parsed 15269 comments from response and converted to dataframe.
+2025-11-10 22:19:30,089 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-10 22:19:30,090 - root - INFO - Loading comments from cache: 5KmpT-BoVf4
+2025-11-10 22:19:30,119 - root - INFO - Parsed 15269 comments from response and converted to dataframe.
+2025-11-10 22:19:30,160 - root - INFO - Starting sentiment analysis...
+2025-11-10 22:22:52,524 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:22:52,534 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-10 22:22:56,032 - root - INFO - Fetched 295 comments for video ID WzvURhaDZqI
+2025-11-10 22:22:56,036 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:22:56,039 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:22:56,040 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:22:56,042 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:22:56,047 - root - INFO - Starting sentiment analysis...
+2025-11-10 22:23:36,892 - root - INFO - Sentiment analysis completed for 295 comments.
+2025-11-10 22:23:36,893 - root - INFO - Starting emotion analysis...
+2025-11-10 22:23:45,765 - root - INFO - Emotion analysis completed for 295 comments.
+2025-11-10 22:23:45,766 - root - INFO - Starting spam detection...
+2025-11-10 22:23:45,768 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 22:23:45,769 - root - INFO - Starting adjective extraction
+2025-11-10 22:23:46,090 - root - INFO - Ajective extraction completed.
+2025-11-10 22:24:14,889 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:24:14,890 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:24:14,890 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:24:14,891 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:24:14,892 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:24:14,892 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:24:14,894 - root - INFO - Starting sentiment analysis...
+2025-11-10 22:24:33,111 - root - INFO - Sentiment analysis completed for 295 comments.
+2025-11-10 22:24:33,112 - root - INFO - Starting emotion analysis...
+2025-11-10 22:24:40,630 - root - INFO - Emotion analysis completed for 295 comments.
+2025-11-10 22:24:40,631 - root - INFO - Starting spam detection...
+2025-11-10 22:24:40,633 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 22:24:40,634 - root - INFO - Starting adjective extraction
+2025-11-10 22:24:40,806 - root - INFO - Ajective extraction completed.
+2025-11-10 22:24:54,979 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:24:54,980 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:24:54,981 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:24:54,982 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:24:54,982 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:24:54,983 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:24:54,984 - root - INFO - Starting sentiment analysis...
+2025-11-10 22:25:13,084 - root - INFO - Sentiment analysis completed for 295 comments.
+2025-11-10 22:25:13,085 - root - INFO - Starting emotion analysis...
+2025-11-10 22:25:22,264 - root - INFO - Emotion analysis completed for 295 comments.
+2025-11-10 22:25:22,265 - root - INFO - Starting spam detection...
+2025-11-10 22:25:22,267 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-10 22:25:22,268 - root - INFO - Starting adjective extraction
+2025-11-10 22:25:22,470 - root - INFO - Ajective extraction completed.
+2025-11-10 22:25:35,738 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:25:35,739 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:25:35,741 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:25:35,744 - root - INFO - Extracted videoID: WzvURhaDZqI from link of TYPE_2: https://youtu.be/WzvURhaDZqI?si=HgIE0Gu8R6M5iI0F
+2025-11-10 22:25:35,745 - root - INFO - Loading comments from cache: WzvURhaDZqI
+2025-11-10 22:25:35,747 - root - INFO - Parsed 295 comments from response and converted to dataframe.
+2025-11-10 22:25:35,753 - root - INFO - Starting sentiment analysis...
+2025-11-10 22:26:06,424 - root - INFO - Sentiment analysis completed for 295 comments.
+2025-11-10 22:26:06,424 - root - INFO - Starting emotion analysis...
+2025-11-10 22:26:26,668 - root - INFO - Emotion analysis completed for 295 comments.
+2025-11-10 22:26:26,669 - root - INFO - Starting spam detection...
+2025-11-10 22:26:26,678 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+
+2025-11-11 16:11:36,530 - root - INFO - Extracted videoID: xv87F2r4jWU from link of TYPE_2: https://youtu.be/xv87F2r4jWU?si=Fxeg0-I0QDvqUs__
+2025-11-11 16:11:36,532 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-11 16:11:38,210 - root - INFO - Fetched 153 comments for video ID xv87F2r4jWU
+2025-11-11 16:11:38,211 - root - INFO - Parsed 153 comments from response and converted to dataframe.
+2025-11-11 16:11:38,223 - root - INFO - Extracted videoID: xv87F2r4jWU from link of TYPE_2: https://youtu.be/xv87F2r4jWU?si=Fxeg0-I0QDvqUs__
+2025-11-11 16:11:38,225 - root - INFO - Loading comments from cache: xv87F2r4jWU
+2025-11-11 16:11:38,226 - root - INFO - Parsed 153 comments from response and converted to dataframe.
+2025-11-11 16:11:38,240 - root - INFO - Starting sentiment analysis...
+2025-11-11 16:11:59,841 - root - INFO - Sentiment analysis completed for 153 comments.
+2025-11-11 16:11:59,842 - root - INFO - Starting emotion analysis...
+2025-11-11 16:12:10,716 - root - INFO - Emotion analysis completed for 153 comments.
+2025-11-11 16:12:10,718 - root - INFO - Starting spam detection...
+2025-11-11 16:12:10,734 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 16:12:10,735 - root - INFO - Starting adjective extraction
+2025-11-11 16:12:10,959 - root - INFO - Ajective extraction completed.
+2025-11-11 16:13:25,482 - root - INFO - Extracted videoID: dXZYOqqg6Kk from link of TYPE_2: https://youtu.be/dXZYOqqg6Kk?si=T0C0Yw2PqfV83NZn
+2025-11-11 16:13:25,486 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-11 16:13:39,468 - root - INFO - Fetched 1575 comments for video ID dXZYOqqg6Kk
+2025-11-11 16:13:39,469 - root - INFO - Parsed 1575 comments from response and converted to dataframe.
+2025-11-11 16:13:39,470 - root - INFO - Extracted videoID: dXZYOqqg6Kk from link of TYPE_2: https://youtu.be/dXZYOqqg6Kk?si=T0C0Yw2PqfV83NZn
+2025-11-11 16:13:39,470 - root - INFO - Loading comments from cache: dXZYOqqg6Kk
+2025-11-11 16:13:39,471 - root - INFO - Parsed 1575 comments from response and converted to dataframe.
+2025-11-11 16:13:39,472 - root - INFO - Starting sentiment analysis...
+2025-11-11 16:14:51,107 - root - INFO - Sentiment analysis completed for 1575 comments.
+2025-11-11 16:14:51,108 - root - INFO - Starting emotion analysis...
+2025-11-11 16:16:22,333 - root - INFO - Emotion analysis completed for 1575 comments.
+2025-11-11 16:16:22,334 - root - INFO - Starting spam detection...
+2025-11-11 16:16:22,340 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 16:16:22,340 - root - INFO - Starting adjective extraction
+2025-11-11 16:16:23,575 - root - INFO - Ajective extraction completed.
+2025-11-11 16:34:41,313 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=7N45cqIKCKpQGPCv
+2025-11-11 16:34:41,314 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=7N45cqIKCKpQGPCv
+2025-11-11 16:34:41,318 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-11 16:34:42,883 - root - INFO - Fetched 113 comments for video ID GQkuuLxzXqM
+2025-11-11 16:34:42,884 - root - INFO - Parsed 113 comments from response and converted to dataframe.
+2025-11-11 16:34:42,888 - root - INFO - Starting sentiment analysis...
+2025-11-11 16:34:47,579 - root - INFO - Sentiment analysis completed for 113 comments.
+2025-11-11 16:34:47,580 - root - INFO - Starting emotion analysis...
+2025-11-11 16:34:51,173 - root - INFO - Emotion analysis completed for 113 comments.
+2025-11-11 16:34:51,173 - root - INFO - Starting spam detection...
+2025-11-11 16:34:51,176 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 16:34:51,177 - root - INFO - Starting adjective extraction
+2025-11-11 16:34:51,357 - root - INFO - Ajective extraction completed.
+2025-11-11 16:34:57,397 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=7N45cqIKCKpQGPCv
+2025-11-11 16:34:57,398 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=7N45cqIKCKpQGPCv
+2025-11-11 16:34:57,398 - root - INFO - Loading comments from cache: GQkuuLxzXqM
+2025-11-11 16:34:57,399 - root - INFO - Parsed 113 comments from response and converted to dataframe.
+2025-11-11 16:34:57,401 - root - INFO - Starting sentiment analysis...
+2025-11-11 16:35:01,906 - root - INFO - Sentiment analysis completed for 113 comments.
+2025-11-11 16:35:01,906 - root - INFO - Starting emotion analysis...
+2025-11-11 16:35:05,184 - root - INFO - Emotion analysis completed for 113 comments.
+2025-11-11 16:35:05,185 - root - INFO - Starting spam detection...
+2025-11-11 16:35:05,188 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 16:35:05,188 - root - INFO - Starting adjective extraction
+2025-11-11 16:35:05,242 - root - INFO - Ajective extraction completed.
+2025-11-11 16:54:55,891 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=SXLmHxlDCme4EN2Y
+2025-11-11 16:54:55,891 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=SXLmHxlDCme4EN2Y
+2025-11-11 16:54:55,892 - root - INFO - Loading comments from cache: GQkuuLxzXqM
+2025-11-11 16:54:55,892 - root - INFO - Parsed 113 comments from response and converted to dataframe.
+2025-11-11 16:54:55,894 - root - INFO - Starting sentiment analysis...
+2025-11-11 16:54:59,760 - root - INFO - Sentiment analysis completed for 113 comments.
+2025-11-11 16:54:59,761 - root - INFO - Starting emotion analysis...
+2025-11-11 16:55:03,223 - root - INFO - Emotion analysis completed for 113 comments.
+2025-11-11 16:55:03,224 - root - INFO - Starting spam detection...
+2025-11-11 16:55:03,227 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+
+2025-11-11 16:59:13,018 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=SXLmHxlDCme4EN2Y
+2025-11-11 16:59:13,019 - root - INFO - Extracted videoID: GQkuuLxzXqM from link of TYPE_2: https://youtu.be/GQkuuLxzXqM?si=SXLmHxlDCme4EN2Y
+2025-11-11 16:59:13,019 - root - INFO - Loading comments from cache: GQkuuLxzXqM
+2025-11-11 16:59:13,020 - root - INFO - Parsed 113 comments from response and converted to dataframe.
+2025-11-11 16:59:13,022 - root - INFO - Starting sentiment analysis...
+2025-11-11 16:59:17,584 - root - INFO - Sentiment analysis completed for 113 comments.
+2025-11-11 16:59:17,584 - root - INFO - Starting emotion analysis...
+2025-11-11 16:59:21,101 - root - INFO - Emotion analysis completed for 113 comments.
+2025-11-11 16:59:21,102 - root - INFO - Starting spam detection...
+2025-11-11 16:59:21,105 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 16:59:21,105 - root - INFO - Starting adjective extraction
+2025-11-11 16:59:21,152 - root - INFO - Ajective extraction completed.
+2025-11-11 17:00:59,567 - root - INFO - Extracted videoID: bz-rVtATmqA from link of TYPE_1: https://www.youtube.com/watch?v=bz-rVtATmqA&list=RDQCUJgh3NiUI&index=2
+2025-11-11 17:00:59,570 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-11 17:01:00,071 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "commentsDisabled"
+2025-11-11 17:01:00,072 - root - ERROR - Error while fetching comments for video ID bz-rVtATmqA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=bz-rVtATmqA&maxResults=50&textFormat=plainText&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', 'domain': 'youtube.commentThread', 'reason': 'commentsDisabled', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-11 17:01:00,072 - root - INFO - Parsed 0 comments from response and converted to dataframe.
+2025-11-11 17:01:55,860 - root - INFO - Extracted videoID: cZiEtknJ5KE from link of TYPE_2: https://youtu.be/cZiEtknJ5KE?si=PKSQGPvVxrmrsX_t
+2025-11-11 17:01:55,863 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-11 17:01:57,401 - root - INFO - Fetched 128 comments for video ID cZiEtknJ5KE
+2025-11-11 17:01:57,402 - root - INFO - Parsed 128 comments from response and converted to dataframe.
+2025-11-11 17:02:37,804 - root - INFO - Starting sentiment analysis...
+2025-11-11 17:02:38,088 - root - INFO - Sentiment analysis time take: 0.28s
+2025-11-11 17:02:38,088 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-11 17:02:38,088 - root - INFO - Starting emotion analysis...
+2025-11-11 17:02:38,262 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-11 17:02:38,262 - root - INFO - Emotion analysis time take: 0.17s
+2025-11-11 17:02:38,263 - root - INFO - Starting spam detection...
+2025-11-11 17:02:38,266 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 17:02:38,266 - root - INFO - Starting adjective extraction
+2025-11-11 17:02:38,450 - root - INFO - Ajective extraction completed.
+2025-11-11 17:02:38,450 - root - INFO - Adjective extraction time take: 0.18s
+2025-11-11 17:25:29,621 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=vLg-SGv5Wo22AXXR
+2025-11-11 17:25:29,621 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=vLg-SGv5Wo22AXXR
+2025-11-11 17:25:29,630 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-11 17:25:32,477 - root - INFO - Fetched 265 comments for video ID Jd2we89pHyc
+2025-11-11 17:25:32,477 - root - INFO - Parsed 265 comments from response and converted to dataframe.
+2025-11-11 17:25:32,478 - root - INFO - Starting sentiment analysis...
+2025-11-11 17:25:47,896 - root - INFO - Sentiment analysis completed for 265 comments.
+2025-11-11 17:25:47,897 - root - INFO - Starting emotion analysis...
+2025-11-11 17:25:53,723 - root - INFO - Emotion analysis completed for 265 comments.
+2025-11-11 17:25:53,723 - root - INFO - Starting spam detection...
+2025-11-11 17:25:53,726 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 17:25:53,726 - root - INFO - Starting adjective extraction
+2025-11-11 17:25:53,796 - root - INFO - Ajective extraction completed.
+2025-11-11 17:26:53,121 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=vLg-SGv5Wo22AXXR
+2025-11-11 17:26:53,121 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=vLg-SGv5Wo22AXXR
+2025-11-11 17:26:53,121 - root - INFO - Loading comments from cache: Jd2we89pHyc
+2025-11-11 17:26:53,122 - root - INFO - Parsed 265 comments from response and converted to dataframe.
+2025-11-11 17:26:53,122 - root - INFO - Starting sentiment analysis...
+2025-11-11 17:27:05,233 - root - INFO - Sentiment analysis completed for 265 comments.
+2025-11-11 17:27:05,233 - root - INFO - Starting emotion analysis...
+2025-11-11 17:27:11,808 - root - INFO - Emotion analysis completed for 265 comments.
+2025-11-11 17:27:11,808 - root - INFO - Starting spam detection...
+2025-11-11 17:27:11,810 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 17:27:11,810 - root - INFO - Starting adjective extraction
+2025-11-11 17:27:11,870 - root - INFO - Ajective extraction completed.
+2025-11-11 17:53:55,317 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=JIHo3N_JK0g5ZtfT
+2025-11-11 17:53:55,317 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=JIHo3N_JK0g5ZtfT
+2025-11-11 17:53:55,318 - root - INFO - Loading comments from cache: Jd2we89pHyc
+2025-11-11 17:53:55,318 - root - INFO - Parsed 265 comments from response and converted to dataframe.
+2025-11-11 17:53:55,321 - root - INFO - Starting sentiment analysis...
+2025-11-11 17:54:08,440 - root - INFO - Sentiment analysis completed for 265 comments.
+2025-11-11 17:54:08,440 - root - INFO - Starting emotion analysis...
+2025-11-11 17:54:15,200 - root - INFO - Emotion analysis completed for 265 comments.
+2025-11-11 17:54:15,201 - root - INFO - Starting spam detection...
+2025-11-11 17:54:15,206 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 17:54:15,206 - root - INFO - Starting adjective extraction
+2025-11-11 17:54:15,315 - root - INFO - Ajective extraction completed.
+2025-11-11 17:55:10,943 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=JIHo3N_JK0g5ZtfT
+2025-11-11 17:55:10,944 - root - INFO - Extracted videoID: Jd2we89pHyc from link of TYPE_2: https://youtu.be/Jd2we89pHyc?si=JIHo3N_JK0g5ZtfT
+2025-11-11 17:55:10,944 - root - INFO - Loading comments from cache: Jd2we89pHyc
+2025-11-11 17:55:10,945 - root - INFO - Parsed 265 comments from response and converted to dataframe.
+2025-11-11 17:55:10,945 - root - INFO - Starting sentiment analysis...
+2025-11-11 17:55:23,394 - root - INFO - Sentiment analysis completed for 265 comments.
+2025-11-11 17:55:23,394 - root - INFO - Starting emotion analysis...
+2025-11-11 17:55:28,968 - root - INFO - Emotion analysis completed for 265 comments.
+2025-11-11 17:55:28,968 - root - INFO - Starting spam detection...
+2025-11-11 17:55:28,970 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-11 17:55:28,971 - root - INFO - Starting adjective extraction
+2025-11-11 17:55:29,041 - root - INFO - Ajective extraction completed.
+2025-11-12 07:29:09,801 - root - INFO - Extracted videoID: SbCTbmZYuMc from link of TYPE_2: https://youtu.be/SbCTbmZYuMc?si=j_Oij-rq4AgewQg2
+2025-11-12 07:29:09,850 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 07:29:12,648 - root - INFO - Fetched 109 comments for video ID SbCTbmZYuMc
+2025-11-12 07:29:12,650 - root - INFO - Parsed 109 comments from response and converted to dataframe.
+2025-11-12 07:29:12,655 - root - INFO - Comment Extraction [SbCTbmZYuMc]: Time taken: 2.85s
+2025-11-12 07:29:12,658 - root - INFO - Starting sentiment analysis...
+2025-11-12 07:29:21,461 - root - INFO - Sentiment analysis time take: 8.80s
+2025-11-12 07:29:21,461 - root - INFO - Sentiment analysis completed for 109 comments.
+2025-11-12 07:29:21,462 - root - INFO - Starting emotion analysis...
+2025-11-12 07:29:24,302 - root - INFO - Emotion analysis completed for 109 comments.
+2025-11-12 07:29:24,302 - root - INFO - Emotion analysis time take: 2.84s
+2025-11-12 07:29:24,302 - root - INFO - Starting spam detection...
+2025-11-12 07:29:24,314 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 07:29:24,315 - root - INFO - Starting adjective extraction
+2025-11-12 07:29:24,528 - root - INFO - Adjective extraction completed.
+2025-11-12 07:29:24,528 - root - INFO - Adjective extraction time take: 0.21s
+2025-11-12 07:29:24,528 - root - INFO - Analysis stored in cache for videoID: SbCTbmZYuMc
+2025-11-12 07:29:24,528 - root - INFO - Analysis completed for videoID: SbCTbmZYuMc
+2025-11-12 07:30:28,338 - root - INFO - Extracted videoID: SbCTbmZYuMc from link of TYPE_2: https://youtu.be/SbCTbmZYuMc?si=j_Oij-rq4AgewQg2
+2025-11-12 07:30:28,339 - root - INFO - Analysis extracted from cache for SbCTbmZYuMc
+2025-11-12 07:30:58,660 - root - INFO - Extracted videoID: SbCTbmZYuMc from link of TYPE_2: https://youtu.be/SbCTbmZYuMc?si=j_Oij-rq4AgewQg2
+2025-11-12 07:30:58,661 - root - INFO - Analysis extracted from cache for SbCTbmZYuMc
+2025-11-12 07:32:58,910 - root - INFO - Extracted videoID: G8nlhcmDXNE from link of TYPE_2: https://youtu.be/G8nlhcmDXNE?si=C2hQPVPclujeZ_jm
+2025-11-12 07:32:58,920 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 07:33:15,642 - root - INFO - Fetched 1782 comments for video ID G8nlhcmDXNE
+2025-11-12 07:33:15,643 - root - INFO - Parsed 1782 comments from response and converted to dataframe.
+2025-11-12 07:33:15,645 - root - INFO - Comment Extraction [G8nlhcmDXNE]: Time taken: 16.73s
+2025-11-12 07:33:15,645 - root - INFO - Starting sentiment analysis...
+2025-11-12 07:35:02,170 - root - INFO - Sentiment analysis time take: 106.52s
+2025-11-12 07:35:02,170 - root - INFO - Sentiment analysis completed for 1782 comments.
+2025-11-12 07:35:02,171 - root - INFO - Starting emotion analysis...
+2025-11-12 07:36:07,774 - root - INFO - Emotion analysis completed for 1782 comments.
+2025-11-12 07:36:07,774 - root - INFO - Emotion analysis time take: 65.60s
+2025-11-12 07:36:07,775 - root - INFO - Starting spam detection...
+2025-11-12 07:36:07,803 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 07:36:07,803 - root - INFO - Starting adjective extraction
+2025-11-12 07:36:08,530 - root - INFO - Adjective extraction completed.
+2025-11-12 07:36:08,531 - root - INFO - Adjective extraction time take: 0.73s
+2025-11-12 07:36:08,531 - root - INFO - Analysis stored in cache for videoID: G8nlhcmDXNE
+2025-11-12 07:36:08,531 - root - INFO - Analysis completed for videoID: G8nlhcmDXNE
+2025-11-12 07:56:20,959 - root - INFO - Starting sentiment analysis...
+2025-11-12 07:56:20,960 - root - ERROR - Error during sentiment analysis: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'
+2025-11-12 07:58:02,411 - root - INFO - Starting sentiment analysis...
+2025-11-12 07:58:02,413 - root - ERROR - Error during sentiment analysis: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'
+2025-11-12 08:01:40,291 - root - INFO - Starting sentiment analysis...
+2025-11-12 08:01:40,292 - root - ERROR - Error during sentiment analysis: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'
+2025-11-12 08:01:40,292 - root - INFO - Starting emotion analysis...
+2025-11-12 08:01:40,404 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 08:01:40,404 - root - INFO - Emotion analysis time take: 0.11s
+2025-11-12 08:01:40,405 - root - INFO - Starting spam detection...
+2025-11-12 08:01:40,414 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 08:01:40,414 - root - INFO - Starting adjective extraction
+2025-11-12 08:01:40,593 - root - INFO - Adjective extraction completed.
+2025-11-12 08:01:40,593 - root - INFO - Adjective extraction time take: 0.18s
+2025-11-12 08:10:15,242 - root - INFO - NLTK resources are downloaded
+2025-11-12 08:10:15,243 - root - INFO - nltk data check completed.
+2025-11-12 08:12:31,977 - root - INFO - NLTK resources are downloaded
+2025-11-12 08:12:31,978 - root - INFO - nltk data check completed.
+2025-11-12 08:12:55,196 - root - INFO - NLTK resources are downloaded
+2025-11-12 08:12:55,196 - root - INFO - nltk data check completed.
+2025-11-12 08:12:59,494 - root - INFO - NLTK resources are downloaded
+2025-11-12 08:12:59,494 - root - INFO - Starting sentiment analysis...
+2025-11-12 08:12:59,698 - root - INFO - Sentiment analysis time take: 0.20s
+2025-11-12 08:12:59,698 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 08:12:59,698 - root - INFO - Starting emotion analysis...
+2025-11-12 08:12:59,784 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 08:12:59,784 - root - INFO - Emotion analysis time take: 0.09s
+2025-11-12 08:12:59,785 - root - INFO - Starting spam detection...
+2025-11-12 08:12:59,792 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 08:12:59,792 - root - INFO - Starting adjective extraction
+2025-11-12 08:12:59,965 - root - INFO - Adjective extraction completed.
+2025-11-12 08:12:59,965 - root - INFO - Adjective extraction time take: 0.17s
+2025-11-12 08:16:35,836 - root - INFO - Extracted videoID: bzwD7vfQJCA from link of TYPE_2: https://youtu.be/bzwD7vfQJCA?si=YWUy0qRNtW6d41BG
+2025-11-12 08:16:35,877 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 08:16:44,088 - root - INFO - Fetched 895 comments for video ID bzwD7vfQJCA
+2025-11-12 08:16:44,089 - root - INFO - Parsed 895 comments from response and converted to dataframe.
+2025-11-12 08:16:44,090 - root - INFO - Comment Extraction [bzwD7vfQJCA]: Time taken: 8.25s
+2025-11-12 08:16:44,091 - root - INFO - Starting sentiment analysis...
+2025-11-12 08:17:44,453 - root - INFO - Sentiment analysis time take: 60.36s
+2025-11-12 08:17:44,454 - root - INFO - Sentiment analysis completed for 895 comments.
+2025-11-12 08:17:44,455 - root - INFO - Starting emotion analysis...
+2025-11-12 08:17:54,013 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (525) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 525].  Tensor sizes: [1, 514]
+2025-11-12 08:17:54,014 - root - INFO - Starting spam detection...
+2025-11-12 08:17:54,026 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 08:17:54,026 - root - INFO - Starting adjective extraction
+2025-11-12 08:17:54,569 - root - INFO - Adjective extraction completed.
+2025-11-12 08:17:54,569 - root - INFO - Adjective extraction time take: 0.54s
+2025-11-12 08:17:54,570 - root - INFO - Analysis stored in cache for videoID: bzwD7vfQJCA
+2025-11-12 08:17:54,570 - root - INFO - Analysis completed for videoID: bzwD7vfQJCA
+2025-11-12 08:20:15,322 - root - INFO - Extracted videoID: CvK5-oImwVA from link of TYPE_2: https://youtu.be/CvK5-oImwVA?si=JJj4HikDXtGAg4lr
+2025-11-12 08:20:15,330 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 08:20:22,304 - root - INFO - Fetched 758 comments for video ID CvK5-oImwVA
+2025-11-12 08:20:22,305 - root - INFO - Parsed 758 comments from response and converted to dataframe.
+2025-11-12 08:20:22,306 - root - INFO - Comment Extraction [CvK5-oImwVA]: Time taken: 6.98s
+2025-11-12 08:20:22,307 - root - INFO - Starting sentiment analysis...
+2025-11-12 08:22:29,031 - root - INFO - Sentiment analysis time take: 126.72s
+2025-11-12 08:22:29,031 - root - INFO - Sentiment analysis completed for 758 comments.
+2025-11-12 08:22:29,032 - root - INFO - Starting emotion analysis...
+2025-11-12 08:22:36,597 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (558) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 558].  Tensor sizes: [1, 514]
+2025-11-12 08:22:36,597 - root - INFO - Starting spam detection...
+2025-11-12 08:22:36,608 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 08:22:36,609 - root - INFO - Starting adjective extraction
+2025-11-12 08:22:36,941 - root - INFO - Adjective extraction completed.
+2025-11-12 08:22:36,941 - root - INFO - Adjective extraction time take: 0.33s
+2025-11-12 08:22:36,942 - root - INFO - Analysis stored in cache for videoID: CvK5-oImwVA
+2025-11-12 08:22:36,942 - root - INFO - Analysis completed for videoID: CvK5-oImwVA
+2025-11-12 16:30:58,474 - root - INFO - NLTK resources are downloaded
+2025-11-12 16:30:58,474 - root - INFO - nltk data check completed.
+2025-11-12 16:31:26,874 - root - INFO - Extracted videoID: RshlH3T27U4 from link of TYPE_2: https://youtu.be/RshlH3T27U4?si=Xfp8JiHSzgIe3d3Z
+2025-11-12 16:31:26,876 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 16:31:39,156 - root - INFO - Fetched 1337 comments for video ID RshlH3T27U4
+2025-11-12 16:31:39,157 - root - INFO - Parsed 1337 comments from response and converted to dataframe.
+2025-11-12 16:31:39,164 - root - INFO - Comment Extraction [RshlH3T27U4]: Time taken: 12.29s
+2025-11-12 16:31:39,167 - root - INFO - Starting sentiment analysis...
+2025-11-12 16:34:04,201 - root - INFO - Sentiment analysis time take: 145.03s
+2025-11-12 16:34:04,202 - root - INFO - Sentiment analysis completed for 1337 comments.
+2025-11-12 16:34:04,203 - root - INFO - Starting emotion analysis...
+2025-11-12 16:34:42,428 - root - INFO - Emotion analysis completed for 1337 comments.
+2025-11-12 16:34:42,428 - root - INFO - Emotion analysis time take: 38.23s
+2025-11-12 16:34:42,429 - root - INFO - Starting spam detection...
+2025-11-12 16:34:42,439 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 16:34:42,439 - root - INFO - Starting adjective extraction
+2025-11-12 16:34:42,944 - root - INFO - Adjective extraction completed.
+2025-11-12 16:34:42,944 - root - INFO - Adjective extraction time take: 0.50s
+2025-11-12 16:34:42,944 - root - INFO - Analysis stored in cache for videoID: RshlH3T27U4
+2025-11-12 16:34:42,945 - root - INFO - Analysis completed for videoID: RshlH3T27U4
+2025-11-12 16:35:12,674 - root - INFO - Extracted videoID: RshlH3T27U4 from link of TYPE_2: https://youtu.be/RshlH3T27U4?si=Xfp8JiHSzgIe3d3Z
+2025-11-12 16:35:12,675 - root - INFO - Analysis extracted from cache for RshlH3T27U4
+2025-11-12 16:44:31,526 - root - INFO - NLTK resources are downloaded
+2025-11-12 16:44:31,526 - root - INFO - nltk data check completed.
+2025-11-12 16:44:45,703 - root - INFO - NLTK resources are downloaded
+2025-11-12 16:44:45,703 - root - INFO - nltk data check completed.
+2025-11-12 16:44:54,555 - root - INFO - Extracted videoID: 5KmpT-BoVf4 from link of TYPE_1: https://www.youtube.com/watch?v=5KmpT-BoVf4
+2025-11-12 16:44:54,559 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 16:47:25,879 - root - INFO - Fetched 15305 comments for video ID 5KmpT-BoVf4
+2025-11-12 16:47:25,889 - root - INFO - Parsed 15305 comments from response and converted to dataframe.
+2025-11-12 16:47:25,897 - root - INFO - Comment Extraction [5KmpT-BoVf4]: Time taken: 151.34s
+2025-11-12 16:47:25,898 - root - INFO - Starting sentiment analysis...
+2025-11-12 16:51:36,961 - root - INFO - NLTK resources are downloaded
+2025-11-12 16:51:36,961 - root - INFO - nltk data check completed.
+2025-11-12 16:51:37,305 - root - INFO - Extracted videoID: RshlH3T27U4 from link of TYPE_2: https://youtu.be/RshlH3T27U4?si=0UnfvrIIZX2Kkm6n
+2025-11-12 16:51:37,307 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 16:51:48,070 - root - INFO - Fetched 1337 comments for video ID RshlH3T27U4
+2025-11-12 16:51:48,072 - root - INFO - Parsed 1337 comments from response and converted to dataframe.
+2025-11-12 16:51:48,074 - root - INFO - Comment Extraction [RshlH3T27U4]: Time taken: 10.77s
+2025-11-12 16:51:48,075 - root - INFO - Starting sentiment analysis...
+2025-11-12 16:53:07,053 - root - INFO - Sentiment analysis time take: 78.98s
+2025-11-12 16:53:07,054 - root - INFO - Sentiment analysis completed for 1337 comments.
+2025-11-12 16:53:45,938 - root - INFO - NLTK resources are downloaded
+2025-11-12 16:53:45,938 - root - INFO - nltk data check completed.
+2025-11-12 16:53:45,939 - root - INFO - Extracted videoID: RshlH3T27U4 from link of TYPE_2: https://youtu.be/RshlH3T27U4?si=0UnfvrIIZX2Kkm6n
+2025-11-12 16:53:45,941 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 16:53:56,005 - root - INFO - Fetched 1337 comments for video ID RshlH3T27U4
+2025-11-12 16:53:56,006 - root - INFO - Parsed 1337 comments from response and converted to dataframe.
+2025-11-12 16:53:56,007 - root - INFO - Comment Extraction [RshlH3T27U4]: Time taken: 10.07s
+2025-11-12 16:53:56,008 - root - INFO - Starting sentiment analysis...
+2025-11-12 16:55:19,845 - root - INFO - Sentiment analysis time take: 83.84s
+2025-11-12 16:55:19,846 - root - INFO - Sentiment analysis completed for 1337 comments.
+2025-11-12 16:55:19,846 - root - INFO - Starting emotion analysis...
+2025-11-12 16:56:03,178 - root - INFO - Emotion analysis completed for 1337 comments.
+2025-11-12 16:56:03,179 - root - INFO - Emotion analysis time take: 43.33s
+2025-11-12 16:56:03,179 - root - INFO - Starting spam detection...
+2025-11-12 16:56:03,182 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 16:56:03,183 - root - INFO - Starting adjective extraction
+2025-11-12 16:56:03,766 - root - INFO - Adjective extraction completed.
+2025-11-12 16:56:03,766 - root - INFO - Adjective extraction time take: 0.58s
+2025-11-12 16:56:03,767 - root - INFO - Analysis stored in cache for videoID: RshlH3T27U4
+2025-11-12 16:56:03,767 - root - INFO - Analysis completed for videoID: RshlH3T27U4
+2025-11-12 17:05:23,364 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:05:23,365 - root - INFO - Starting sentiment analysis...
+2025-11-12 17:05:23,592 - root - INFO - Sentiment analysis time take: 0.23s
+2025-11-12 17:05:23,592 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 17:05:23,593 - root - INFO - Starting emotion analysis...
+2025-11-12 17:05:23,710 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 17:05:23,710 - root - INFO - Emotion analysis time take: 0.12s
+2025-11-12 17:05:23,710 - root - INFO - Starting spam detection...
+2025-11-12 17:05:23,713 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 17:05:23,714 - root - INFO - Starting adjective extraction
+2025-11-12 17:05:23,849 - root - INFO - Adjective extraction completed.
+2025-11-12 17:05:23,850 - root - INFO - Adjective extraction time take: 0.14s
+2025-11-12 17:05:25,195 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:05:25,195 - root - INFO - nltk data check completed.
+2025-11-12 17:07:46,830 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:07:46,830 - root - INFO - Starting sentiment analysis...
+2025-11-12 17:07:47,040 - root - INFO - Sentiment analysis time take: 0.21s
+2025-11-12 17:07:47,040 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 17:07:47,041 - root - INFO - Starting emotion analysis...
+2025-11-12 17:07:47,173 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 17:07:47,173 - root - INFO - Emotion analysis time take: 0.13s
+2025-11-12 17:07:47,174 - root - INFO - Starting spam detection...
+2025-11-12 17:07:47,177 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 17:07:47,177 - root - INFO - Starting adjective extraction
+2025-11-12 17:07:47,328 - root - INFO - Adjective extraction completed.
+2025-11-12 17:07:47,328 - root - INFO - Adjective extraction time take: 0.15s
+2025-11-12 17:07:48,249 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:07:48,250 - root - INFO - nltk data check completed.
+2025-11-12 17:52:19,620 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:52:19,621 - root - INFO - Starting sentiment analysis...
+2025-11-12 17:52:19,815 - root - INFO - Sentiment analysis time take: 0.19s
+2025-11-12 17:52:19,815 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 17:52:19,815 - root - INFO - Starting emotion analysis...
+2025-11-12 17:52:19,911 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 17:52:19,911 - root - INFO - Emotion analysis time take: 0.10s
+2025-11-12 17:52:19,911 - root - INFO - Starting spam detection...
+2025-11-12 17:52:19,914 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 17:52:19,914 - root - INFO - Starting adjective extraction
+2025-11-12 17:52:20,048 - root - INFO - Adjective extraction completed.
+2025-11-12 17:52:20,048 - root - INFO - Adjective extraction time take: 0.13s
+2025-11-12 17:55:19,428 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:55:19,428 - root - INFO - nltk data check completed.
+2025-11-12 17:55:20,302 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:55:20,302 - root - INFO - Starting sentiment analysis...
+2025-11-12 17:55:20,483 - root - INFO - Sentiment analysis time take: 0.18s
+2025-11-12 17:55:20,483 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 17:55:20,483 - root - INFO - Starting emotion analysis...
+2025-11-12 17:55:20,582 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 17:55:20,582 - root - INFO - Emotion analysis time take: 0.10s
+2025-11-12 17:55:20,583 - root - INFO - Starting spam detection...
+2025-11-12 17:55:20,585 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 17:55:20,585 - root - INFO - Starting adjective extraction
+2025-11-12 17:55:20,684 - root - INFO - Adjective extraction completed.
+2025-11-12 17:55:20,684 - root - INFO - Adjective extraction time take: 0.10s
+2025-11-12 17:56:34,554 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:56:34,554 - root - INFO - Starting sentiment analysis...
+2025-11-12 17:56:34,799 - root - INFO - Sentiment analysis time take: 0.24s
+2025-11-12 17:56:34,800 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 17:56:34,800 - root - INFO - Starting emotion analysis...
+2025-11-12 17:56:34,934 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 17:56:34,934 - root - INFO - Emotion analysis time take: 0.13s
+2025-11-12 17:56:34,934 - root - INFO - Starting spam detection...
+2025-11-12 17:56:34,937 - root - ERROR - Error during spam detection: 'LogisticRegression' object is not callable
+2025-11-12 17:56:34,938 - root - INFO - Starting adjective extraction
+2025-11-12 17:56:35,093 - root - INFO - Adjective extraction completed.
+2025-11-12 17:56:35,093 - root - INFO - Adjective extraction time take: 0.16s
+2025-11-12 17:56:35,423 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:56:35,423 - root - INFO - nltk data check completed.
+2025-11-12 17:57:31,772 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:57:31,772 - root - INFO - nltk data check completed.
+2025-11-12 17:58:42,895 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:58:42,896 - root - INFO - nltk data check completed.
+2025-11-12 17:59:37,139 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:59:37,139 - root - INFO - nltk data check completed.
+2025-11-12 17:59:56,252 - root - INFO - NLTK resources are downloaded
+2025-11-12 17:59:56,252 - root - INFO - Starting sentiment analysis...
+2025-11-12 17:59:56,508 - root - INFO - Sentiment analysis time take: 0.26s
+2025-11-12 17:59:56,508 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 17:59:56,509 - root - INFO - Starting emotion analysis...
+2025-11-12 17:59:56,653 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 17:59:56,653 - root - INFO - Emotion analysis time take: 0.14s
+2025-11-12 17:59:56,654 - root - INFO - Starting spam detection...
+2025-11-12 17:59:56,656 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-12 17:59:56,657 - root - INFO - Starting adjective extraction
+2025-11-12 17:59:56,783 - root - INFO - Adjective extraction completed.
+2025-11-12 17:59:56,783 - root - INFO - Adjective extraction time take: 0.13s
+2025-11-12 18:03:03,072 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:03:03,072 - root - INFO - nltk data check completed.
+2025-11-12 18:03:08,898 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:03:08,898 - root - INFO - Starting sentiment analysis...
+2025-11-12 18:03:09,125 - root - INFO - Sentiment analysis time take: 0.23s
+2025-11-12 18:03:09,125 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 18:03:09,125 - root - INFO - Starting emotion analysis...
+2025-11-12 18:03:09,219 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 18:03:09,219 - root - INFO - Emotion analysis time take: 0.09s
+2025-11-12 18:03:09,219 - root - INFO - Starting spam detection...
+2025-11-12 18:03:09,222 - root - ERROR - Error during spam detection: Expected 2D array, got 1D array instead:
+array=[<Compressed Sparse Row sparse matrix of dtype 'float64'
+ 	with 0 stored elements and shape (1, 3032)>           ].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+2025-11-12 18:03:09,222 - root - INFO - Starting adjective extraction
+2025-11-12 18:03:09,348 - root - INFO - Adjective extraction completed.
+2025-11-12 18:03:09,349 - root - INFO - Adjective extraction time take: 0.13s
+2025-11-12 18:03:37,064 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:03:37,065 - root - INFO - Starting sentiment analysis...
+2025-11-12 18:03:37,241 - root - INFO - Sentiment analysis time take: 0.18s
+2025-11-12 18:03:37,241 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 18:03:37,242 - root - INFO - Starting emotion analysis...
+2025-11-12 18:03:37,326 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 18:03:37,326 - root - INFO - Emotion analysis time take: 0.08s
+2025-11-12 18:03:37,326 - root - INFO - Starting spam detection...
+2025-11-12 18:03:37,356 - root - INFO - Spam detection completed for 4 comments.
+2025-11-12 18:03:37,357 - root - INFO - Spam analysis time taken: 0.03s
+2025-11-12 18:03:37,357 - root - INFO - Starting adjective extraction
+2025-11-12 18:03:37,447 - root - INFO - Adjective extraction completed.
+2025-11-12 18:03:37,448 - root - INFO - Adjective extraction time take: 0.09s
+2025-11-12 18:03:38,520 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:03:38,521 - root - INFO - nltk data check completed.
+2025-11-12 18:05:03,772 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:05:03,772 - root - INFO - nltk data check completed.
+2025-11-12 18:05:04,876 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:05:04,876 - root - INFO - Starting sentiment analysis...
+2025-11-12 18:05:05,072 - root - INFO - Sentiment analysis time take: 0.20s
+2025-11-12 18:05:05,072 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 18:05:05,072 - root - INFO - Starting emotion analysis...
+2025-11-12 18:05:05,176 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 18:05:05,176 - root - INFO - Emotion analysis time take: 0.10s
+2025-11-12 18:05:05,176 - root - INFO - Starting spam detection...
+2025-11-12 18:05:05,185 - root - INFO - Spam detection completed for 4 comments.
+2025-11-12 18:05:05,186 - root - INFO - Spam analysis time taken: 0.01s
+2025-11-12 18:05:05,186 - root - INFO - Starting adjective extraction
+2025-11-12 18:05:05,328 - root - INFO - Adjective extraction completed.
+2025-11-12 18:05:05,328 - root - INFO - Adjective extraction time take: 0.14s
+2025-11-12 18:54:30,851 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:54:30,851 - root - INFO - nltk data check completed.
+2025-11-12 18:57:33,201 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:57:33,202 - root - INFO - nltk data check completed.
+2025-11-12 18:58:26,625 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:58:26,625 - root - INFO - nltk data check completed.
+2025-11-12 18:58:44,808 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:58:44,809 - root - INFO - nltk data check completed.
+2025-11-12 18:59:18,337 - root - INFO - NLTK resources are downloaded
+2025-11-12 18:59:18,337 - root - INFO - nltk data check completed.
+2025-11-12 19:00:22,361 - root - INFO - NLTK resources are downloaded
+2025-11-12 19:00:22,362 - root - INFO - nltk data check completed.
+2025-11-12 19:00:50,967 - root - INFO - NLTK resources are downloaded
+2025-11-12 19:00:50,967 - root - INFO - nltk data check completed.
+2025-11-12 19:00:55,534 - root - INFO - NLTK resources are downloaded
+2025-11-12 19:00:55,536 - root - INFO - Starting sentiment analysis...
+2025-11-12 19:00:55,537 - root - INFO - Starting emotion analysis...
+2025-11-12 19:00:55,562 - root - INFO - Starting spam detection...
+2025-11-12 19:00:55,563 - root - INFO - Starting adjective extraction
+2025-11-12 19:00:55,592 - root - INFO - Spam detection completed for 4 comments.
+2025-11-12 19:00:55,595 - root - INFO - Spam analysis time taken: 0.03s
+2025-11-12 19:00:55,729 - root - INFO - Adjective extraction completed.
+2025-11-12 19:00:55,730 - root - INFO - Adjective extraction time take: 0.17s
+2025-11-12 19:00:55,871 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-12 19:00:55,871 - root - INFO - Emotion analysis time take: 0.33s
+2025-11-12 19:00:55,991 - root - INFO - Sentiment analysis time take: 0.46s
+2025-11-12 19:00:55,992 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-12 19:01:36,962 - root - INFO - Extracted videoID: RshlH3T27U4 from link of TYPE_2: https://youtu.be/RshlH3T27U4?si=0UnfvrIIZX2Kkm6n
+2025-11-12 19:01:36,965 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 19:01:51,583 - root - INFO - Fetched 1337 comments for video ID RshlH3T27U4
+2025-11-12 19:01:51,585 - root - INFO - Parsed 1337 comments from response and converted to dataframe.
+2025-11-12 19:01:51,587 - root - INFO - Comment Extraction [RshlH3T27U4]: Time taken: 14.62s
+2025-11-12 19:01:51,588 - root - INFO - Starting sentiment analysis...
+2025-11-12 19:01:51,589 - root - INFO - Starting emotion analysis...
+2025-11-12 19:01:51,590 - root - INFO - Starting spam detection...
+2025-11-12 19:01:51,593 - root - INFO - Starting adjective extraction
+2025-11-12 19:01:52,418 - root - INFO - Adjective extraction completed.
+2025-11-12 19:01:52,418 - root - INFO - Adjective extraction time take: 0.82s
+2025-11-12 19:01:56,296 - root - INFO - Spam detection completed for 1337 comments.
+2025-11-12 19:01:56,297 - root - INFO - Spam analysis time taken: 4.71s
+2025-11-12 19:02:35,140 - root - INFO - Emotion analysis completed for 1337 comments.
+2025-11-12 19:02:35,140 - root - INFO - Emotion analysis time take: 43.55s
+2025-11-12 19:03:04,257 - root - INFO - Sentiment analysis time take: 72.67s
+2025-11-12 19:03:04,257 - root - INFO - Sentiment analysis completed for 1337 comments.
+2025-11-12 19:03:04,259 - root - INFO - Analysis stored in cache for videoID: RshlH3T27U4
+2025-11-12 19:03:04,259 - root - INFO - Analysis completed for videoID: RshlH3T27U4
+2025-11-12 19:07:31,906 - root - INFO - NLTK resources are downloaded
+2025-11-12 19:07:31,907 - root - INFO - nltk data check completed.
+2025-11-12 19:07:44,622 - root - INFO - Extracted videoID: Zyqc83NI9_E from link of TYPE_2: https://youtu.be/Zyqc83NI9_E?si=y1NOM-JT6vaHzxZB
+2025-11-12 19:07:44,627 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-12 19:07:48,660 - root - INFO - Fetched 330 comments for video ID Zyqc83NI9_E
+2025-11-12 19:07:48,661 - root - INFO - Parsed 330 comments from response and converted to dataframe.
+2025-11-12 19:07:48,663 - root - INFO - Comment Extraction [Zyqc83NI9_E]: Time taken: 4.04s
+2025-11-12 19:07:48,665 - root - INFO - Starting sentiment analysis...
+2025-11-12 19:07:48,667 - root - INFO - Starting emotion analysis...
+2025-11-12 19:07:48,672 - root - INFO - Starting spam detection...
+2025-11-12 19:07:48,675 - root - INFO - Starting adjective extraction
+2025-11-12 19:07:49,188 - root - INFO - Adjective extraction completed.
+2025-11-12 19:07:49,195 - root - INFO - Adjective extraction time take: 0.51s
+2025-11-12 19:07:50,637 - root - INFO - Spam detection completed for 330 comments.
+2025-11-12 19:07:50,637 - root - INFO - Spam analysis time taken: 1.96s
+2025-11-12 19:08:06,535 - root - INFO - Emotion analysis completed for 330 comments.
+2025-11-12 19:08:06,536 - root - INFO - Emotion analysis time take: 17.87s
+2025-11-12 19:08:16,294 - root - INFO - Sentiment analysis time take: 27.63s
+2025-11-12 19:08:16,294 - root - INFO - Sentiment analysis completed for 330 comments.
+2025-11-12 19:08:16,296 - root - INFO - Total Analysis Time:27.63s 
+2025-11-12 19:08:16,296 - root - INFO - Analysis stored in cache for videoID: Zyqc83NI9_E
+2025-11-12 19:08:16,297 - root - INFO - Analysis completed for videoID: Zyqc83NI9_E
+2025-11-12 19:22:11,762 - root - INFO - NLTK resources are downloaded
+2025-11-12 19:22:11,763 - root - INFO - nltk data check completed.
+2025-11-13 08:34:22,161 - root - INFO - Extracted videoID: cZiEtknJ5KE from link of TYPE_2: https://youtu.be/cZiEtknJ5KE?si=PKSQGPvVxrmrsX_t
+2025-11-13 08:34:22,174 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-13 08:34:24,367 - root - INFO - Fetched 129 comments for video ID cZiEtknJ5KE
+2025-11-13 08:34:24,369 - root - INFO - Parsed 129 comments from response and converted to dataframe.
+2025-11-13 18:58:56,738 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-13 18:58:57,354 - root - ERROR - Error while fetching comments for video ID https://youtu.be/AtT0MorhYE4?si=2WnOuVj62dHOzSg5: <HttpError 404 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=https%3A%2F%2Fyoutu.be%2FAtT0MorhYE4%3Fsi%3D2WnOuVj62dHOzSg5&maxResults=100&textFormat=plainText&key=AIzaSyA5mtjkyzMrFoUc2ej35I43W-WBR7GrR3w&alt=json returned "The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter could not be found.". Details: "[{'message': 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter could not be found.', 'domain': 'youtube.commentThread', 'reason': 'videoNotFound', 'location': 'videoId', 'locationType': 'parameter'}]">
+2025-11-13 18:58:57,355 - root - INFO - Parsed 0 comments from response and converted to dataframe.
+2025-11-13 18:58:57,370 - root - INFO - Comment Extraction [https://youtu.be/AtT0MorhYE4?si=2WnOuVj62dHOzSg5]: Time taken: 0.68s
+2025-11-13 18:59:37,105 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-13 18:59:53,778 - root - INFO - Fetched 4493 comments for video ID AtT0MorhYE4
+2025-11-13 18:59:53,783 - root - INFO - Parsed 4493 comments from response and converted to dataframe.
+2025-11-13 18:59:53,788 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 16.69s
+2025-11-13 19:30:28,722 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-13 19:30:28,723 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-14 17:01:19,994 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-14 17:01:35,728 - root - INFO - Fetched 4496 comments for video ID AtT0MorhYE4
+2025-11-14 17:01:35,745 - root - INFO - Parsed 4496 comments from response and converted to dataframe.
+2025-11-14 17:01:35,756 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 15.77s
+2025-11-14 17:01:35,970 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-14 17:01:35,971 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-15 16:51:43,393 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-15 16:51:59,203 - root - INFO - Fetched 4502 comments for video ID AtT0MorhYE4
+2025-11-15 16:51:59,209 - root - INFO - Parsed 4502 comments from response and converted to dataframe.
+2025-11-15 16:51:59,219 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 15.84s
+2025-11-15 16:52:12,317 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-15 16:52:12,318 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-15 17:11:19,883 - root - INFO - Loading comments from cache: AtT0MorhYE4
+2025-11-15 17:11:19,892 - root - INFO - Parsed 4502 comments from response and converted to dataframe.
+2025-11-15 17:11:19,898 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 0.01s
+2025-11-15 17:11:20,121 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-15 17:11:20,122 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
