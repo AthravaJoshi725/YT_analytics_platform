@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',

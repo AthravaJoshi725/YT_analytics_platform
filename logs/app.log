@@ -1063,3 +1063,372 @@ Reshape your data either using array.reshape(-1, 1) if your data has a single fe
 2025-11-15 17:11:19,898 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 0.01s
 2025-11-15 17:11:20,121 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
 2025-11-15 17:11:20,122 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 21:54:14,709 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-18 21:54:27,757 - root - INFO - Fetched 4504 comments for video ID AtT0MorhYE4
+2025-11-18 21:54:27,760 - root - INFO - Parsed 4504 comments from response and converted to dataframe.
+2025-11-18 21:54:27,765 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 13.06s
+2025-11-18 21:54:27,940 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 21:54:27,941 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:01:18,433 - root - INFO - Loading comments from cache: AtT0MorhYE4
+2025-11-18 22:01:18,441 - root - INFO - Parsed 4504 comments from response and converted to dataframe.
+2025-11-18 22:01:18,447 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 0.01s
+2025-11-18 22:01:22,783 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:01:22,784 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:02:45,235 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:02:45,368 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-11-18 22:03:01,103 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:03:01,217 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-11-18 22:05:06,520 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:05:06,637 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2025-11-18 22:05:45,914 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:05:48,677 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:06:25,739 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:06:27,840 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 22:35:16,224 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:35:16,224 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:35:20,901 - __main__ - INFO - Gemini client initialized successfully.
+2025-11-18 22:35:20,901 - __main__ - INFO - Running full RAG test on dummy data...
+2025-11-18 22:35:20,902 - __main__ - INFO - Initializing RAG pipeline...
+2025-11-18 22:35:20,902 - __main__ - INFO - Cleaned 5 comments.
+2025-11-18 22:35:20,903 - __main__ - INFO - Created 1 chunks.
+2025-11-18 22:35:21,063 - __main__ - INFO - Chunk embeddings created: shape=(1, 768), time=0.16s
+2025-11-18 22:35:21,063 - __main__ - INFO - VectorDB created successfully.
+2025-11-18 22:35:21,120 - __main__ - INFO - Similarity search completed in 0.0001s
+2025-11-18 22:35:21,120 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:35:22,301 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 22:35:22,304 - __main__ - INFO - Gemini response generated in 1.18s
+2025-11-18 22:35:22,305 - __main__ - INFO - Full RAG pipeline executed in 1.24s
+2025-11-18 22:40:48,084 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:40:48,084 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:40:52,325 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-18 22:40:52,332 - root - INFO - NLTK resources are downloaded
+2025-11-18 22:40:52,332 - root - INFO - nltk data check completed.
+2025-11-18 22:41:56,056 - root - INFO - Extracted videoID: AtT0MorhYE4 from link of TYPE_2: https://youtu.be/AtT0MorhYE4?si=mVVSGK_8WXu1zVJ0
+2025-11-18 22:41:56,061 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-18 22:42:07,535 - root - INFO - Fetched 4504 comments for video ID AtT0MorhYE4
+2025-11-18 22:42:07,542 - root - INFO - Parsed 4504 comments from response and converted to dataframe.
+2025-11-18 22:42:07,547 - root - INFO - Comment Extraction [AtT0MorhYE4]: Time taken: 11.49s
+2025-11-18 22:42:07,549 - root - INFO - Starting sentiment analysis...
+2025-11-18 22:42:07,551 - root - INFO - Starting emotion analysis...
+2025-11-18 22:42:07,557 - root - INFO - Starting spam detection...
+2025-11-18 22:42:07,558 - root - INFO - Starting adjective extraction
+2025-11-18 22:42:09,700 - root - INFO - Adjective extraction completed.
+2025-11-18 22:42:09,701 - root - INFO - Adjective extraction time take: 2.14s
+2025-11-18 22:42:22,565 - root - INFO - Spam detection completed for 4504 comments.
+2025-11-18 22:42:22,566 - root - INFO - Spam analysis time taken: 15.01s
+2025-11-18 22:42:39,970 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (1244) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 1244].  Tensor sizes: [1, 514]
+2025-11-18 22:44:28,099 - root - INFO - NLTK resources are downloaded
+2025-11-18 22:44:28,100 - root - INFO - Starting sentiment analysis...
+2025-11-18 22:44:28,101 - root - INFO - Starting emotion analysis...
+2025-11-18 22:44:28,102 - root - INFO - Starting spam detection...
+2025-11-18 22:44:28,104 - root - INFO - Starting adjective extraction
+2025-11-18 22:44:28,117 - root - INFO - Spam detection completed for 4 comments.
+2025-11-18 22:44:28,117 - root - INFO - Spam analysis time taken: 0.01s
+2025-11-18 22:44:28,310 - root - INFO - Adjective extraction completed.
+2025-11-18 22:44:28,311 - root - INFO - Adjective extraction time take: 0.21s
+2025-11-18 22:44:28,491 - root - INFO - Emotion analysis completed for 4 comments.
+2025-11-18 22:44:28,491 - root - INFO - Emotion analysis time take: 0.39s
+2025-11-18 22:44:28,563 - root - INFO - Sentiment analysis time take: 0.46s
+2025-11-18 22:44:28,564 - root - INFO - Sentiment analysis completed for 4 comments.
+2025-11-18 22:44:28,568 - root - INFO - Total Analysis Time:0.47s 
+2025-11-18 22:46:26,103 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:46:26,103 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:46:30,347 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-18 22:46:30,354 - root - INFO - NLTK resources are downloaded
+2025-11-18 22:46:30,354 - root - INFO - nltk data check completed.
+2025-11-18 22:47:03,061 - root - INFO - Extracted videoID: BKOVzHcjEIo from link of TYPE_2: https://youtu.be/BKOVzHcjEIo?si=whvEYPboNIJaXDRR
+2025-11-18 22:47:03,066 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-18 22:47:30,772 - root - INFO - Fetched 12461 comments for video ID BKOVzHcjEIo
+2025-11-18 22:47:30,779 - root - INFO - Parsed 12461 comments from response and converted to dataframe.
+2025-11-18 22:47:30,786 - root - INFO - Comment Extraction [BKOVzHcjEIo]: Time taken: 27.72s
+2025-11-18 22:47:30,788 - root - INFO - Starting sentiment analysis...
+2025-11-18 22:47:30,789 - root - INFO - Starting emotion analysis...
+2025-11-18 22:47:30,791 - root - INFO - Starting spam detection...
+2025-11-18 22:47:30,792 - root - INFO - Starting adjective extraction
+2025-11-18 22:47:34,595 - root - INFO - Adjective extraction completed.
+2025-11-18 22:47:34,596 - root - INFO - Adjective extraction time take: 3.80s
+2025-11-18 22:47:39,299 - root - ERROR - Error during emotion analysis: The expanded size of the tensor (722) must match the existing size (514) at non-singleton dimension 1.  Target sizes: [1, 722].  Tensor sizes: [1, 514]
+2025-11-18 22:48:02,180 - root - INFO - Spam detection completed for 12461 comments.
+2025-11-18 22:48:02,181 - root - INFO - Spam analysis time taken: 31.39s
+2025-11-18 22:50:26,277 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:50:26,277 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:50:30,557 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-18 22:50:30,563 - root - INFO - NLTK resources are downloaded
+2025-11-18 22:50:30,563 - root - INFO - nltk data check completed.
+2025-11-18 22:50:45,038 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 22:50:45,044 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-18 22:50:47,991 - root - INFO - Fetched 505 comments for video ID sTlzjFABmoA
+2025-11-18 22:50:47,992 - root - INFO - Parsed 505 comments from response and converted to dataframe.
+2025-11-18 22:50:47,993 - root - INFO - Comment Extraction [sTlzjFABmoA]: Time taken: 2.95s
+2025-11-18 22:50:47,995 - root - INFO - Starting sentiment analysis...
+2025-11-18 22:50:47,996 - root - INFO - Starting emotion analysis...
+2025-11-18 22:50:48,000 - root - INFO - Starting spam detection...
+2025-11-18 22:50:48,004 - root - INFO - Starting adjective extraction
+2025-11-18 22:50:48,938 - root - INFO - Adjective extraction completed.
+2025-11-18 22:50:48,940 - root - INFO - Adjective extraction time take: 0.93s
+2025-11-18 22:50:50,308 - root - INFO - Spam detection completed for 505 comments.
+2025-11-18 22:50:50,309 - root - INFO - Spam analysis time taken: 2.31s
+2025-11-18 22:51:18,178 - root - INFO - Emotion analysis completed for 505 comments.
+2025-11-18 22:51:18,178 - root - INFO - Emotion analysis time take: 30.18s
+2025-11-18 22:51:33,770 - root - INFO - Sentiment analysis time take: 45.77s
+2025-11-18 22:51:33,771 - root - INFO - Sentiment analysis completed for 505 comments.
+2025-11-18 22:51:33,773 - root - INFO - Total Analysis Time:45.78s 
+2025-11-18 22:51:33,773 - root - INFO - Analysis stored in cache for videoID: sTlzjFABmoA
+2025-11-18 22:51:33,774 - root - INFO - Analysis completed for videoID: sTlzjFABmoA
+2025-11-18 22:51:33,774 - services.rag - INFO - Initializing RAG pipeline...
+2025-11-18 22:51:33,782 - services.rag - INFO - Cleaned 505 comments.
+2025-11-18 22:51:33,785 - services.rag - INFO - Created 92 chunks.
+2025-11-18 22:52:00,748 - services.rag - INFO - Chunk embeddings created: shape=(92, 768), time=26.96s
+2025-11-18 22:52:00,749 - services.rag - INFO - VectorDB created successfully.
+2025-11-18 22:52:00,750 - root - INFO - RAG db saved in cache for {video_id}
+2025-11-18 22:52:07,518 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:52:07,519 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:52:11,832 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-18 22:52:11,839 - root - INFO - NLTK resources are downloaded
+2025-11-18 22:52:11,840 - root - INFO - nltk data check completed.
+2025-11-18 22:52:38,599 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 22:52:38,602 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-18 22:52:41,074 - root - INFO - Fetched 505 comments for video ID sTlzjFABmoA
+2025-11-18 22:52:41,075 - root - INFO - Parsed 505 comments from response and converted to dataframe.
+2025-11-18 22:52:41,076 - root - INFO - Comment Extraction [sTlzjFABmoA]: Time taken: 2.48s
+2025-11-18 22:52:41,077 - root - INFO - Starting sentiment analysis...
+2025-11-18 22:52:41,078 - root - INFO - Starting emotion analysis...
+2025-11-18 22:52:41,081 - root - INFO - Starting spam detection...
+2025-11-18 22:52:41,082 - root - INFO - Starting adjective extraction
+2025-11-18 22:52:41,870 - root - INFO - Adjective extraction completed.
+2025-11-18 22:52:41,873 - root - INFO - Adjective extraction time take: 0.79s
+2025-11-18 22:52:43,191 - root - INFO - Spam detection completed for 505 comments.
+2025-11-18 22:52:43,191 - root - INFO - Spam analysis time taken: 2.11s
+2025-11-18 22:53:01,434 - root - INFO - Emotion analysis completed for 505 comments.
+2025-11-18 22:53:01,435 - root - INFO - Emotion analysis time take: 20.36s
+2025-11-18 22:53:16,095 - root - INFO - Sentiment analysis time take: 35.02s
+2025-11-18 22:53:16,096 - root - INFO - Sentiment analysis completed for 505 comments.
+2025-11-18 22:53:16,098 - root - INFO - Total Analysis Time:35.02s 
+2025-11-18 22:53:16,098 - root - INFO - Analysis stored in cache for videoID: sTlzjFABmoA
+2025-11-18 22:53:16,098 - root - INFO - Analysis completed for videoID: sTlzjFABmoA
+2025-11-18 22:53:16,098 - services.rag - INFO - Initializing RAG pipeline...
+2025-11-18 22:53:16,104 - services.rag - INFO - Cleaned 505 comments.
+2025-11-18 22:53:16,105 - services.rag - INFO - Created 92 chunks.
+2025-11-18 22:53:41,643 - services.rag - INFO - Chunk embeddings created: shape=(92, 768), time=25.54s
+2025-11-18 22:53:41,644 - services.rag - INFO - VectorDB created successfully.
+2025-11-18 22:53:41,644 - root - INFO - RAG db saved in cache for {video_id}
+2025-11-18 22:54:40,050 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 22:55:56,228 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-18 22:55:56,228 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-18 22:56:00,218 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-18 22:56:00,223 - root - INFO - NLTK resources are downloaded
+2025-11-18 22:56:00,223 - root - INFO - nltk data check completed.
+2025-11-18 22:56:00,224 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 22:56:57,540 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 22:56:57,546 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-18 22:57:00,845 - root - INFO - Fetched 505 comments for video ID sTlzjFABmoA
+2025-11-18 22:57:00,846 - root - INFO - Parsed 505 comments from response and converted to dataframe.
+2025-11-18 22:57:00,847 - root - INFO - Comment Extraction [sTlzjFABmoA]: Time taken: 3.31s
+2025-11-18 22:57:00,849 - root - INFO - Starting sentiment analysis...
+2025-11-18 22:57:00,849 - root - INFO - Starting emotion analysis...
+2025-11-18 22:57:00,851 - root - INFO - Starting spam detection...
+2025-11-18 22:57:00,853 - root - INFO - Starting adjective extraction
+2025-11-18 22:57:01,756 - root - INFO - Adjective extraction completed.
+2025-11-18 22:57:01,758 - root - INFO - Adjective extraction time take: 0.90s
+2025-11-18 22:57:03,519 - root - INFO - Spam detection completed for 505 comments.
+2025-11-18 22:57:03,520 - root - INFO - Spam analysis time taken: 2.67s
+2025-11-18 22:57:22,217 - root - INFO - Emotion analysis completed for 505 comments.
+2025-11-18 22:57:22,218 - root - INFO - Emotion analysis time take: 21.37s
+2025-11-18 22:57:38,063 - root - INFO - Sentiment analysis time take: 37.21s
+2025-11-18 22:57:38,064 - root - INFO - Sentiment analysis completed for 505 comments.
+2025-11-18 22:57:38,065 - root - INFO - Total Analysis Time:37.22s 
+2025-11-18 22:57:38,066 - root - INFO - Analysis stored in cache for videoID: sTlzjFABmoA
+2025-11-18 22:57:38,066 - root - INFO - Analysis completed for videoID: sTlzjFABmoA
+2025-11-18 22:57:38,066 - services.rag - INFO - Initializing RAG pipeline...
+2025-11-18 22:57:38,070 - services.rag - INFO - Cleaned 505 comments.
+2025-11-18 22:57:38,072 - services.rag - INFO - Created 92 chunks.
+2025-11-18 22:57:58,599 - services.rag - INFO - Chunk embeddings created: shape=(92, 768), time=20.53s
+2025-11-18 22:57:58,600 - services.rag - INFO - VectorDB created successfully.
+2025-11-18 22:57:58,600 - root - INFO - RAG db saved in cache for {video_id}
+2025-11-18 22:59:17,202 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 22:59:17,297 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.09s
+2025-11-18 22:59:17,298 - services.rag - INFO - Similarity search completed in 0.0003s
+2025-11-18 22:59:17,300 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 22:59:19,080 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 22:59:19,082 - services.rag - INFO - Gemini response generated in 1.78s
+2025-11-18 22:59:19,083 - services.rag - INFO - Full RAG pipeline executed in 1.88s
+2025-11-18 23:00:12,172 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:00:12,234 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.06s
+2025-11-18 23:00:12,234 - services.rag - INFO - Similarity search completed in 0.0002s
+2025-11-18 23:00:12,235 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:00:13,613 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:00:13,614 - services.rag - INFO - Gemini response generated in 1.38s
+2025-11-18 23:00:13,615 - services.rag - INFO - Full RAG pipeline executed in 1.44s
+2025-11-18 23:00:52,517 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:00:52,746 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.23s
+2025-11-18 23:00:52,748 - services.rag - INFO - Similarity search completed in 0.0012s
+2025-11-18 23:00:52,750 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:00:54,210 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:00:54,214 - services.rag - INFO - Gemini response generated in 1.46s
+2025-11-18 23:00:54,214 - services.rag - INFO - Full RAG pipeline executed in 1.70s
+2025-11-18 23:01:41,605 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:01:41,848 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.24s
+2025-11-18 23:01:41,850 - services.rag - INFO - Similarity search completed in 0.0009s
+2025-11-18 23:01:41,851 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:01:43,260 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:01:43,265 - services.rag - INFO - Gemini response generated in 1.41s
+2025-11-18 23:01:43,266 - services.rag - INFO - Full RAG pipeline executed in 1.66s
+2025-11-18 23:02:00,102 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:02:00,344 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.24s
+2025-11-18 23:02:00,346 - services.rag - INFO - Similarity search completed in 0.0007s
+2025-11-18 23:02:00,347 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:02:01,692 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:02:01,696 - services.rag - INFO - Gemini response generated in 1.35s
+2025-11-18 23:02:01,698 - services.rag - INFO - Full RAG pipeline executed in 1.59s
+2025-11-18 23:02:19,691 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:02:19,970 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.28s
+2025-11-18 23:02:19,972 - services.rag - INFO - Similarity search completed in 0.0009s
+2025-11-18 23:02:19,973 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:02:21,132 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:02:21,136 - services.rag - INFO - Gemini response generated in 1.16s
+2025-11-18 23:02:21,137 - services.rag - INFO - Full RAG pipeline executed in 1.44s
+2025-11-18 23:02:42,848 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:02:43,084 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.23s
+2025-11-18 23:02:43,086 - services.rag - INFO - Similarity search completed in 0.0010s
+2025-11-18 23:02:43,088 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:02:44,394 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:02:44,398 - services.rag - INFO - Gemini response generated in 1.31s
+2025-11-18 23:02:44,400 - services.rag - INFO - Full RAG pipeline executed in 1.55s
+2025-11-18 23:03:32,862 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:03:33,132 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.27s
+2025-11-18 23:03:33,135 - services.rag - INFO - Similarity search completed in 0.0010s
+2025-11-18 23:03:33,136 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:03:34,773 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:03:34,777 - services.rag - INFO - Gemini response generated in 1.64s
+2025-11-18 23:03:34,778 - services.rag - INFO - Full RAG pipeline executed in 1.92s
+2025-11-18 23:04:18,725 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:04:18,963 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.24s
+2025-11-18 23:04:18,965 - services.rag - INFO - Similarity search completed in 0.0011s
+2025-11-18 23:04:18,966 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:04:20,547 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:04:20,551 - services.rag - INFO - Gemini response generated in 1.58s
+2025-11-18 23:04:20,552 - services.rag - INFO - Full RAG pipeline executed in 1.83s
+2025-11-18 23:04:46,923 - root - INFO - Extracted videoID: sTlzjFABmoA from link of TYPE_2: https://youtu.be/sTlzjFABmoA?si=BaCqwFk1ntH73tb0
+2025-11-18 23:04:47,195 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.27s
+2025-11-18 23:04:47,197 - services.rag - INFO - Similarity search completed in 0.0008s
+2025-11-18 23:04:47,198 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-18 23:04:48,502 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-18 23:04:48,507 - services.rag - INFO - Gemini response generated in 1.31s
+2025-11-18 23:04:48,508 - services.rag - INFO - Full RAG pipeline executed in 1.58s
+2025-11-24 19:17:26,367 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-24 19:17:26,370 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-24 19:17:36,122 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-24 19:17:36,143 - root - INFO - NLTK resources are downloaded
+2025-11-24 19:17:36,145 - root - INFO - nltk data check completed.
+2025-11-24 19:18:01,152 - root - INFO - Extracted videoID: YpKej05RgsY from link of TYPE_2: https://youtu.be/YpKej05RgsY?si=sva4ZJ-tSDqo7bZi
+2025-11-24 19:18:01,190 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-24 19:18:14,652 - root - INFO - Fetched 2576 comments for video ID YpKej05RgsY
+2025-11-24 19:18:14,654 - root - INFO - Parsed 2576 comments from response and converted to dataframe.
+2025-11-24 19:18:14,656 - root - INFO - Comment Extraction [YpKej05RgsY]: Time taken: 13.50s
+2025-11-24 19:18:14,657 - root - INFO - Starting sentiment analysis...
+2025-11-24 19:18:14,658 - root - INFO - Starting emotion analysis...
+2025-11-24 19:18:14,660 - root - INFO - Starting spam detection...
+2025-11-24 19:18:14,661 - root - INFO - Starting adjective extraction
+2025-11-24 19:18:16,781 - root - INFO - Adjective extraction completed.
+2025-11-24 19:18:16,782 - root - INFO - Adjective extraction time take: 2.09s
+2025-11-24 19:18:45,437 - root - INFO - Spam detection completed for 2576 comments.
+2025-11-24 19:18:45,438 - root - INFO - Spam analysis time taken: 30.78s
+2025-11-24 19:19:55,200 - root - INFO - Emotion analysis completed for 2576 comments.
+2025-11-24 19:19:55,201 - root - INFO - Emotion analysis time take: 100.54s
+2025-11-24 19:21:21,598 - root - INFO - Sentiment analysis time take: 186.94s
+2025-11-24 19:21:21,599 - root - INFO - Sentiment analysis completed for 2576 comments.
+2025-11-24 19:21:21,601 - root - INFO - Total Analysis Time:186.94s 
+2025-11-24 19:21:21,602 - root - INFO - Analysis stored in cache for videoID: YpKej05RgsY
+2025-11-24 19:21:21,603 - root - INFO - Analysis completed for videoID: YpKej05RgsY
+2025-11-24 19:21:21,603 - services.rag - INFO - Initializing RAG pipeline...
+2025-11-24 19:21:21,622 - services.rag - INFO - Cleaned 2576 comments.
+2025-11-24 19:21:21,627 - services.rag - INFO - Created 270 chunks.
+2025-11-24 19:23:30,595 - services.rag - INFO - Chunk embeddings created: shape=(270, 768), time=128.97s
+2025-11-24 19:23:30,597 - services.rag - INFO - VectorDB created successfully.
+2025-11-24 19:23:30,598 - root - INFO - RAG db saved in cache for {video_id}
+2025-11-24 19:25:16,209 - root - INFO - Extracted videoID: YpKej05RgsY from link of TYPE_2: https://youtu.be/YpKej05RgsY?si=sva4ZJ-tSDqo7bZi
+2025-11-24 19:25:16,439 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.23s
+2025-11-24 19:25:16,442 - vector_db.vectordb - INFO - Similarity search completed in 0.0021s
+2025-11-24 19:25:16,446 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-24 19:25:19,013 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-24 19:25:19,020 - services.rag - INFO - Gemini response generated in 2.57s
+2025-11-24 19:25:19,021 - services.rag - INFO - Full RAG pipeline executed in 2.81s
+2025-11-24 19:26:01,206 - root - INFO - Extracted videoID: YpKej05RgsY from link of TYPE_2: https://youtu.be/YpKej05RgsY?si=sva4ZJ-tSDqo7bZi
+2025-11-24 19:26:01,491 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.28s
+2025-11-24 19:26:01,495 - vector_db.vectordb - INFO - Similarity search completed in 0.0019s
+2025-11-24 19:26:01,498 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-24 19:26:04,170 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-24 19:26:04,176 - services.rag - INFO - Gemini response generated in 2.68s
+2025-11-24 19:26:04,178 - services.rag - INFO - Full RAG pipeline executed in 2.97s
+2025-11-24 19:28:04,875 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-24 19:28:04,875 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-24 19:28:08,197 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-24 19:28:08,201 - root - INFO - NLTK resources are downloaded
+2025-11-24 19:28:08,201 - root - INFO - nltk data check completed.
+2025-11-24 19:32:54,727 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-24 19:32:54,727 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-24 19:32:58,005 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-24 19:32:58,009 - root - INFO - NLTK resources are downloaded
+2025-11-24 19:32:58,009 - root - INFO - nltk data check completed.
+2025-11-24 19:34:27,684 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-24 19:34:27,684 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-24 19:34:31,341 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-24 19:34:31,345 - root - INFO - NLTK resources are downloaded
+2025-11-24 19:34:31,345 - root - INFO - nltk data check completed.
+2025-11-24 19:35:24,218 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-24 19:35:24,218 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-24 19:35:27,677 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-24 19:35:27,682 - root - INFO - NLTK resources are downloaded
+2025-11-24 19:35:27,682 - root - INFO - nltk data check completed.
+2025-11-24 19:35:36,421 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-11-24 19:35:36,422 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-11-24 19:35:40,174 - services.rag - INFO - Gemini client initialized successfully.
+2025-11-24 19:35:40,178 - root - INFO - NLTK resources are downloaded
+2025-11-24 19:35:40,178 - root - INFO - nltk data check completed.
+2025-11-24 19:36:10,858 - root - INFO - Extracted videoID: -3r3km62jeY from link of TYPE_2: https://youtu.be/-3r3km62jeY?si=LyOEGEiSBhnlsQQz
+2025-11-24 19:36:10,860 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-11-24 19:36:12,730 - root - INFO - Fetched 128 comments for video ID -3r3km62jeY
+2025-11-24 19:36:12,730 - root - INFO - Parsed 128 comments from response and converted to dataframe.
+2025-11-24 19:36:12,731 - root - INFO - Comment Extraction [-3r3km62jeY]: Time taken: 1.87s
+2025-11-24 19:36:12,732 - root - INFO - Starting sentiment analysis...
+2025-11-24 19:36:12,732 - root - INFO - Starting emotion analysis...
+2025-11-24 19:36:12,735 - root - INFO - Starting spam detection...
+2025-11-24 19:36:12,736 - root - INFO - Starting adjective extraction
+2025-11-24 19:36:12,890 - root - INFO - Adjective extraction completed.
+2025-11-24 19:36:12,891 - root - INFO - Adjective extraction time take: 0.15s
+2025-11-24 19:36:13,125 - root - INFO - Spam detection completed for 128 comments.
+2025-11-24 19:36:13,125 - root - INFO - Spam analysis time taken: 0.39s
+2025-11-24 19:36:17,591 - root - INFO - Emotion analysis completed for 128 comments.
+2025-11-24 19:36:17,592 - root - INFO - Emotion analysis time take: 4.86s
+2025-11-24 19:36:20,782 - root - INFO - Sentiment analysis time take: 8.05s
+2025-11-24 19:36:20,782 - root - INFO - Sentiment analysis completed for 128 comments.
+2025-11-24 19:36:20,784 - root - INFO - Total Analysis Time:8.05s 
+2025-11-24 19:36:20,785 - root - INFO - Analysis stored in cache for videoID: -3r3km62jeY
+2025-11-24 19:36:20,785 - root - INFO - Analysis completed for videoID: -3r3km62jeY
+2025-11-24 19:36:20,786 - root - INFO - Rag background task started for -3r3km62jeY
+2025-11-24 19:36:20,793 - services.rag - INFO - Initializing RAG pipeline...
+2025-11-24 19:36:20,795 - services.rag - INFO - Cleaned 128 comments.
+2025-11-24 19:36:20,795 - services.rag - INFO - Created 9 chunks.
+2025-11-24 19:36:23,757 - services.rag - INFO - Chunk embeddings created: shape=(9, 768), time=2.96s
+2025-11-24 19:36:23,758 - services.rag - INFO - VectorDB created successfully.
+2025-11-24 19:36:23,758 - root - INFO - RAG background task completed -  db saved in cache for {video_id}
+2025-11-24 19:36:47,946 - root - INFO - Extracted videoID: -3r3km62jeY from link of TYPE_2: https://youtu.be/-3r3km62jeY?si=LyOEGEiSBhnlsQQz
+2025-11-24 19:36:47,995 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.05s
+2025-11-24 19:36:47,996 - vector_db.vectordb - INFO - Similarity search completed in 0.0002s
+2025-11-24 19:36:47,996 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-24 19:36:50,823 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-11-24 19:36:50,826 - services.rag - INFO - Gemini response generated in 2.83s
+2025-11-24 19:36:50,826 - services.rag - INFO - Full RAG pipeline executed in 2.88s
+2025-11-24 19:38:50,007 - root - INFO - Extracted videoID: -3r3km62jeY from link of TYPE_2: https://youtu.be/-3r3km62jeY?si=LyOEGEiSBhnlsQQz
+2025-11-24 19:38:50,007 - root - INFO - Analysis extracted from cache for -3r3km62jeY
+2025-11-24 19:39:00,641 - root - INFO - Extracted videoID: -3r3km62jeY from link of TYPE_2: https://youtu.be/-3r3km62jeY?si=LyOEGEiSBhnlsQQz
+2025-11-24 19:39:00,678 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.04s
+2025-11-24 19:39:00,679 - vector_db.vectordb - INFO - Similarity search completed in 0.0002s
+2025-11-24 19:39:00,679 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-11-24 19:39:05,523 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1alpha/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2025-11-24 19:39:53,839 - root - INFO - Extracted videoID: -3r3km62jeY from link of TYPE_2: https://youtu.be/-3r3km62jeY?si=LyOEGEiSBhnlsQQz
+2025-11-24 19:39:53,839 - root - INFO - Analysis extracted from cache for -3r3km62jeY
+2025-11-24 19:40:13,988 - root - INFO - Extracted videoID: -3r3km62jeY from link of TYPE_2: https://youtu.be/-3r3km62jeY?si=LyOEGEiSBhnlsQQz
+2025-11-24 19:40:14,072 - services.rag - INFO - Chunk embeddings created: shape=(768,), time=0.08s
+2025-11-24 19:40:14,073 - vector_db.vectordb - INFO - Similarity search completed in 0.0002s
+2025-11-24 19:40:14,073 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.

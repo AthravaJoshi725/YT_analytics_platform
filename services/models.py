@@ -14,7 +14,7 @@ def load_sentiment_model():
 def load_emotion_model():
     local_path = r"C:\Users\Admin\.cache\huggingface\hub\models--j-hartmann--emotion-english-distilroberta-base\snapshots\manual_download"
     # folder = [os.path.join(local_path, f) for f in os.listdir(local_path)][0]
-    model = pipeline("text-classification", model=local_path)
+    model = pipeline("text-classification", model=local_path, max_length=512, truncation=True)
     # takes first two scores
     return model
 

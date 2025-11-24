@@ -1,16 +1,24 @@
+from vector_db.vectordb import VectorDB
+
 import pandas as pd
 import numpy as np
 import os
 import json
 import re
 import logging
-import config
 import time
 
+from google import genai
+from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
+import config
+#  Logging Setup 
+from pathlib import Path
 
-log_file = config.OUTPUT_PATHS.get('log_file', 'app.log')
-os.makedirs(os.path.dirname(log_file), exist_ok=True)
+LOG_FILE = Path("logs/app.log")
+LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+log_file = LOG_FILE
 
 logging.basicConfig(
     level=logging.INFO,
@@ -21,235 +29,150 @@ logging.basicConfig(
     ]
 )
 
-EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+logger = logging.getLogger(__name__)
 
-def preprocess_comments(text:str) -> str:
+
+#  Load Models & API 
+load_dotenv()
+API_KEY = os.environ.get("GENAI_API_KEY", None)
+
+EMBEDDING_MODEL = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+
+client = None
+if API_KEY:
+    try:
+        client = genai.Client(api_key=API_KEY, http_options={"api_version": "v1alpha"})
+        logger.info("Gemini client initialized successfully.")
+    except Exception as e:
+        logger.error(f"Failed to initialize Gemini client: {e}")
+        client = None
+else:
+    logger.warning("GENAI_API_KEY not found. Gemini responses will fail.")
+
+
+#  RAG Utilities 
+def preprocess_comments(text: str) -> str:
     if not isinstance(text, str):
         return ""
-        
-    # remove urls
-    text = re.sub(r'https\S+|www\.\S+', "", text)
-
-    # lowercase
+    text = re.sub(r"https\S+|www\.\S+", "", text)
     text = text.lower()
-
-    # remove extra spaces
     text = re.sub(r"\s+", " ", text).strip()
+    return text
 
-    return text 
 
-def chunk_comments(comments, max_words = 200):
-    chunks = []
-    current_chunk = []
+def chunk_comments(comments, max_words=200):
+    chunks, current_chunk = [], []
     word_count = 0
-    
+
     for comment in comments:
         words = comment.split()
 
         if len(words) + word_count > max_words:
             chunks.append(" ".join(current_chunk))
-            current_chunk = []
-            word_count = 0
+            current_chunk, word_count = [], 0
+
         current_chunk.append(comment)
         word_count += len(words)
 
     if current_chunk:
         chunks.append(" ".join(current_chunk))
-    
-    logging.info(f"{len(chunks)} chunks successfully creaeted")
+
+    logger.info(f"Created {len(chunks)} chunks.")
     return chunks
 
-def embedding_chunks(chunks, embedding_model):
-    embeddings = embedding_model.encode(
-        chunks,
-        convert_to_numpy=True,
-        batch_size=32
-        )
-    logging.INFO(f"{embeddings.shape}")
+
+def embedding_chunks(chunks, embedding_model=EMBEDDING_MODEL):
+    start = time.time()
+    embeddings = embedding_model.encode(chunks, convert_to_numpy=True, batch_size=32)
+    end = time.time()
+
+    logger.info(
+        f"Chunk embeddings created: shape={embeddings.shape}, time={end - start:.2f}s"
+    )
     return embeddings
 
-class VectorDB:
-    def __init__(self,embedding_dim:int):
-        '''
-        Embedding_dim  = size of each embedding (number of features used to represent the meaning)
-        [768 for mpnet]
-        '''
 
-        self.embedding_dim = embedding_dim
-        self.embeddings = np.empty((0,embedding_dim), dtype='float32')
-        self.chunks = [] # text storage
-        self.ids = [] # simple incremental IDS
+def create_rag(comments, max_words=200):
+    logger.info("Initializing RAG pipeline...")
 
-        self.__next_id = 0
-    
-    def add(self, chunk:str, embedding: np.array):
-        """
-        Insert a single chunk + embedding 
-        
+    cleaned_comments = [preprocess_comments(c) for c in comments]
+    logger.info(f"Cleaned {len(cleaned_comments)} comments.")
 
-        """
-
-        if embedding.shape[0] != self.embedding_dim:
-            raise ValueError("Embedding dimension mismatch")
-        
-        # add text
-        self.chunks.append(chunk)
-
-        # add embedding --- shape of input embedding = (768,)
-        embedding = embedding.reshape(1,-1)
-        # after reshape --- (1,768)
-
-        self.embeddings = np.vstack([self.embeddings, embedding])
-
-        # add ID
-        new_id = self.__next_id
-        self.ids.append(new_id)
-
-        self.__next_id += 1
-
-        return new_id
-
-    def add_all(self, chunk_list, embedding_list):
-        '''
-        Insert multiple chunks + embedding in batch 
-        '''
-        # convert the embedding list to numpy
-        embeddings_list = np.array(embedding_list, dtype="float32")
-
-        if embeddings_list.shape[1] != self.embedding_dim:
-            raise ValueError("Embedding dimension mismatch")
-        
-        # add all chunks
-        self.chunks.extend(chunk_list)
-        # add all embeddings at once
-        self.embeddings = np.vstack([self.embeddings, embedding_list])
-
-        # create ids for this batch
-        start_id = self.__next_id
-        end_id = start_id + len(chunk_list)
-
-        batch_ids = list(range(start_id,end_id))
-        self.ids.extend(batch_ids)
-
-        self.__next_id = end_id
-
-        return batch_ids
-    
-    def _cosine_similarity(self, query_vec: np.ndarray, matrix: np.ndarray):
-        """
-        Compute similarity between query vector and all stored embeddings.
-        """
-        # normalize query
-        query_norm = query_vec / (np.linalg.norm(query_vec) + 1e-10)
-        # normalize all embeddings
-        matrix_norm = matrix / (np.linalg.norm(matrix, axis=1, keepdims=True)+ 1e-10)
-
-        scores = np.dot(matrix_norm, query_norm)
-
-        return scores # shape: (num_chunks, ) a list of num_chunks which is 227
-    
-    def search(self, query_embedding: np.ndarray, top_k: int=5):
-        """
-        Find top k most similar chunks to the query embedding
-        Return: list of dict{id, chunk, score}
-        """
-        if query_embedding.shape[0] != self.embedding_dim:
-            raise ValueError("Embedding dimensions mismatch")
-
-        # compute cosine similarity
-        scores = self._cosine_similarity(query_embedding, self.embeddings)
-
-        # get top-k indexes in descending order
-        top_idx = np.argsort(scores)[::-1][:top_k]
-
-        results = []
-
-        for idx in top_idx:
-            results.append({
-                "id": self.ids[idx],
-                "chunk": self.chunks[idx],
-                "score": float(scores[idx])
-            })
-        
-        return results
-    
-    def save(self,folder_path:str):
-        """
-        Save embeddings, chunks and metadata to disk 
-        """
-
-        os.makedirs(folder_path, exist_ok=True)
-
-        # save emebddings
-        np.save(os.path.join(folder_path, "embeddings.npy"), self.embeddings)
-
-        # save chunks + id + metadata
-        metadata = {
-            "chunks" : self.chunks,
-            "ids" : self.ids,
-            "embedding_dim": self.embedding_dim,
-            "next_id": self.__next_id
-        }
-
-        with open(os.path.join(folder_path, "metadata.json"), "w", encoding="utf-8") as f:
-            json.dump(metadata, f, indent=4)
-        
-        return True
-    
-    @classmethod
-    def load(cls, folder_path: str):
-        """
-        load the disk
-        """
-        
-        # load metadata
-        with open(os.path.join(folder_path, "metadata.json"), 'r', encoding="utf-8") as f:
-            metadata = json.load(f)
-        
-        # create new instance [ cls == Vectordb]
-        db = cls(embedding_dim = metadata['embedding_dim'])
-
-        # load embeddings
-        db.embeddings = np.load(os.path.join(folder_path, "embeddings.npy"))
-
-        # load chunks + ids
-        db.chunks = metadata['chunks']
-        db.ids = metadata['ids']
-        db.__next_id = metadata['next_id']
-
-        return db
-
-
-def rag_result(comments, max_words):
-    logging.info("Starting RAG system")
-
-    # clean the comments
-    cleaned_comments  = [preprocess_comments(c) for c in comments]
-    logging.info(f"{len(cleaned_comments)} comments cleaned")
-
-    # Split the comments into chunks
-    start = time.time()
     chunks = chunk_comments(cleaned_comments, max_words=max_words)
-    end = time.time()
-    logging.info(f"{len(chunks)} chunks created in time: {end - start:.2f}s")
+    embeddings = embedding_chunks(chunks)
 
-    # Convert the chunks into embeddings using sentence transformers
-    start = time.time()
-    embeddings = embedding_chunks(chunks, EMBEDDING_MODEL)
-    embeddings_dimension = embeddings.shape[1]
-    end = time.time()
-    logging.info(f"Chunks converted to embeddings in time {end - start:.2f}s")
+    db = VectorDB(embeddings.shape[1])
+    db.add_all(chunks, embeddings)
 
-    # Create a vector database
-    db = VectorDB(embeddings_dimension)
-    batch_ids = db.add_all(chunks, embeddings)
-    
+    logger.info("VectorDB created successfully.")
     return db
 
-def search_rag(db,user_query, k):
-    """
-    This function will take query convert to embeddings and then search
-    """
 
-def ai_answer():
-    pass
+def generate_llm_response(prompt):
+    if not client:
+        return "[ERROR: Gemini client is not initialized]"
+
+    start = time.time()
+    resp = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=[prompt],
+    )
+    end = time.time()
+
+    logger.info(f"Gemini response generated in {end - start:.2f}s")
+    return resp.text
+
+
+def rag_prompt(user_query, search_results):
+    context = "\n\n".join([r["chunk"] for r in search_results])
+
+    return f"""
+You are an AI assistant answering strictly based on YouTube comments below.
+
+CONTEXT:
+{context}
+
+QUESTION:
+{user_query}
+
+INSTRUCTIONS:
+- Use ONLY the context.
+- Do NOT hallucinate.
+- Give a short and clear response.
+""".strip()
+
+
+def run_rag(user_query, vector_db, embedding_model=EMBEDDING_MODEL, top_k=5):
+    start = time.time()
+    query_emb = embedding_chunks(user_query)
+    retrieved = vector_db.search(query_emb, top_k)
+    prompt = rag_prompt(user_query, retrieved)
+    answer = generate_llm_response(prompt)
+    end = time.time()
+
+    logger.info(f"Full RAG pipeline executed in {end - start:.2f}s")
+
+    return {"answer": answer, "chunks_used": retrieved}
+
+
+#  TESTING 
+if __name__ == "__main__":
+    dummy_comments = [
+        "This video is amazing!",
+        "I really liked the editing.",
+        "Worst video ever made.",
+        "Music was too loud.",
+        "Loved the tutorial, very helpful!",
+    ]
+
+    logger.info("Running full RAG test on dummy data...")
+
+    db = create_rag(dummy_comments, max_words=50)
+
+    user_query = "What did people say about the quality?"
+    result = run_rag(user_query, db, EMBEDDING_MODEL, top_k=3)
+
+    print("\nANSWER:\n", result["answer"])
+    print("\nCHUNKS USED:")
+    for c in result["chunks_used"]:
+        print(c)

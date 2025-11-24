@@ -1,14 +1,15 @@
 from fastapi import FastAPI
+from fastapi import BackgroundTasks
+
 from collections import Counter
 from services.yt_comments import func_get_comments, extract_video_id
 from services.analysis import get_analysis, check_nltk_data
+from services.rag import create_rag, run_rag
 from cachetools import TTLCache
 import config
 import logging
 import os
 
-log_file = config.OUTPUT_PATHS.get('log_file', 'app.log')
-os.makedirs(os.path.dirname(log_file), exist_ok=True)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,6 +30,17 @@ def setup_resources():
     check_nltk_data()
     logging.info("nltk data check completed.")
 
+def run_rag_background(comments, video_id):
+    '''
+    Create Rag db in background
+    Inputs: Comments as list and video_id as str
+    Returns: vector db object
+    '''
+    db = create_rag(comments)
+    rag_cache[video_id] = db
+    logging.info("RAG background task completed -  db saved in cache for {video_id}")
+
+
 def get_percentage(labels):
     '''
     labels : list 
@@ -45,11 +57,11 @@ async def get_comments(youtube_link: str):
     return {"total_comments": len(comments_data), "comments": comments_data.to_dict(orient="records")}
 
 @app.post("/analyze")
-async def analyze(youtube_link: str):
+async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
     video_id = extract_video_id(youtube_link)
 
     # fetch analysis from cache
-    if video_id in analysis_cache:
+    if video_id in analysis_cache and video_id in rag_cache:
         logging.info(f'Analysis extracted from cache for {video_id}')
         return analysis_cache[video_id]
 
@@ -89,6 +101,20 @@ async def analyze(youtube_link: str):
 
     logging.info(f'Analysis completed for videoID: {video_id}')
 
+    background_tasks.add_task(run_rag_background, comments_data, video_id)
+    logging.info(f"Rag background task started for {video_id}")
 
     return analysis_result
+
+
+
+@app.post("/ask")
+async def ask_question(youtube_link: str, user_query: str):
+    video_id = extract_video_id(youtube_link)
+    db = rag_cache[video_id]
+
+    rag_response = run_rag(user_query, db, 10)
+
+    return rag_response['answer']
+
 # myenv\Scripts\python.exe -m uvicorn app:app --reload     
