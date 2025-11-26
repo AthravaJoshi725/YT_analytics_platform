@@ -1,5 +1,7 @@
 from vector_db.vectordb import VectorDB
 
+from tenacity import retry, stop_after_attempt, wait_exponential
+
 import pandas as pd
 import numpy as np
 import os
@@ -107,7 +109,7 @@ def create_rag(comments, max_words=200):
     logger.info("VectorDB created successfully.")
     return db
 
-
+@retry(stop = stop_after_attempt(3), wait = wait_exponential(multiplier=1, min=2, max=4), reraise=True)
 def generate_llm_response(prompt):
     if not client:
         return "[ERROR: Gemini client is not initialized]"
@@ -151,7 +153,7 @@ def run_rag(user_query, vector_db, embedding_model=EMBEDDING_MODEL, top_k=5):
     end = time.time()
 
     logger.info(f"Full RAG pipeline executed in {end - start:.2f}s")
-
+    # logger.info(f"RAG answer: {retrieved}")
     return {"answer": answer, "chunks_used": retrieved}
 
 
