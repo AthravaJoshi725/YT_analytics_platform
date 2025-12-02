@@ -1,11 +1,16 @@
 __pycache__/
-logs/
-*.csv
-.ipynb_checkpoints/
-.env
-venv/
-myenv/
 datasets/
-.git/
 notebooks/
-models/
+vector_db/
+rag_model.ipynb
+models/   # model files MUST NOT be uploaded
+*.log
+logs/
+.env
+*.pyc
+*.pkl
+*.bin
+*.npz
+*.pt
+*.pth
+venv/
