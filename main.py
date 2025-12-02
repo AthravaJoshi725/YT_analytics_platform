@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi import BackgroundTasks
-
+from pydantic import BaseModel
 from contextlib import asynccontextmanager
 from collections import Counter
 
@@ -23,6 +23,9 @@ logging.basicConfig(
     ]
 )
 
+
+class CommentsRequest(BaseModel):
+    youtube_link: str
 
 
 # cache for analysis results upto 10 videos for 30 minutes
@@ -67,17 +70,17 @@ def get_percentage(labels):
 
 
 @app.post("/get_comments/")
-async def get_comments(youtube_link: str):
-    video_id = extract_video_id(youtube_link)
+async def get_comments(req: CommentsRequest):
+    video_id = extract_video_id(req.youtube_link)
     comments_data = func_get_comments(video_id)
     return {"total_comments": len(comments_data), "comments": comments_data.to_dict(orient="records")}
 
 
 
 @app.post("/analyze")
-async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
+async def analyze(req: CommentsRequest, background_tasks: BackgroundTasks):
     # get video_id
-    video_id = extract_video_id(youtube_link)
+    video_id = extract_video_id(req.youtube_link)
 
     # fetch analysis from cache
     if video_id in analysis_cache:
@@ -86,6 +89,7 @@ async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
 
     # if not extract comments and store in dataframe
     df = func_get_comments(video_id)
+
     if df is None or 'comment' not in df.columns:
         logging.error(f"Failed to extract comments for videoID: {video_id}")
         return {"error": "No comments found or invalid format"}
@@ -93,11 +97,6 @@ async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
     # convert the single comment column to list
     comments_data = df['comment'].tolist()
 
-    # storing rag db in cache
-    if video_id not in rag_cache:
-        background_tasks.add_task(run_rag_background, comments_data, video_id)
-        logging.info(f"Rag background task started for {video_id}")
-        
     # get analysis
     sentiment_result, emotion_result, spam_result, adjectives = get_analysis(comments_data)
     sentiment_distribution = get_percentage(sentiment_result)
@@ -122,13 +121,18 @@ async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
     logging.info(f'Analysis stored in cache for videoID: {video_id}')
     logging.info(f'Analysis completed for videoID: {video_id}')
 
+    # storing rag db in cache
+    if video_id not in rag_cache:
+        background_tasks.add_task(run_rag_background, comments_data, video_id)
+        logging.info(f"Rag background task started for {video_id}")
+
     return analysis_result
 
 
 
 @app.post("/ask")
-async def ask_question(youtube_link: str, user_query: str):
-    video_id = extract_video_id(youtube_link)
+async def ask_question(req: CommentsRequest, user_query: str):
+    video_id = extract_video_id(req.youtube_link)
     if video_id not in rag_cache:
         return {"error": "Rag not ready yet. Try again after a few seconds."}
     

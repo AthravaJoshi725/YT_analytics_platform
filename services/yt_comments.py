@@ -27,7 +27,8 @@ logging.basicConfig(
 
 
 # cache upto 10 video comments for 30 minutes
-yt_cache = TTLCache(maxsize=10, ttl = 1800)
+yt_comments_cache = TTLCache(maxsize=10, ttl = 1800)
+yt_details_cache = TTLCache(maxsize=10, ttl=1800)
 
 def extract_video_id(yt_link):
     # This function takes yt_link and extracts video ID from it
@@ -49,12 +50,61 @@ def extract_video_id(yt_link):
 
     return video_id
 
+def extract_video_detail(video_id):
+    # check cache
+    if video_id in yt_details_cache:
+        logging.info(f"Loading details from cache: {video_id}")
+        return yt_details_cache[video_id]
+
+
+    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+    api_service_name = "youtube"
+    api_version = "v3"
+    DEVELOPER_KEY = API_KEY
+    try:
+        youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey = DEVELOPER_KEY)
+
+        request = youtube.videos().list(
+            part="snippet,statistics",
+            id=video_id
+        )
+        response = request.execute()
+        logging.info(f"yt_details extracted for {video_id} ")
+
+    except Exception as e:
+        logging.error(f"Error while getting yt_details response: {e}")
+        return {}
+
+
+    # Parse response
+    video_details = {}
+    try:
+        item = response["items"][0]['snippet']
+        video_details = {
+            "title": item.get("title"),
+            "channelName": item.get("channelTitle"),
+            "description": item.get("description"),
+            "publishedAt": item.get("publishedAt")
+            }
+        
+        yt_details_cache[video_id] = video_details
+        logging.info(f"{video_id} details saved in cache")
+
+        logging.info(f"Parsed video details for video_id: {video_id}")
+        return video_details
+    
+    except Exception as e:
+        logging.error("Parsing for yt_details failed")
+        return {}
+    
+
+
 def extract_comments(video_id):
 
     # chech cache first using video id
-    if video_id in yt_cache:
+    if video_id in yt_comments_cache:
         logging.info(f"Loading comments from cache: {video_id}")
-        return {"items": yt_cache[video_id]}
+        return {"items": yt_comments_cache[video_id]}
     
 
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -70,6 +120,7 @@ def extract_comments(video_id):
     try:
         youtube = googleapiclient.discovery.build(
             api_service_name, api_version, developerKey = DEVELOPER_KEY)
+        
         
         # fetch one page with the next page token
         def fetch_page(token = None):
@@ -126,7 +177,7 @@ def extract_comments(video_id):
         token_queue.join()
         
         # store in cache
-        yt_cache[video_id] = all_comments
+        yt_comments_cache[video_id] = all_comments
         logging.info(f'Fetched {len(all_comments)} comments for video ID {video_id}')
 
     except Exception as e:
@@ -134,6 +185,7 @@ def extract_comments(video_id):
         return {"items": []}
 
     return {"items": all_comments}
+
 
 def parse_comments(response):
     comments_data = []
@@ -158,8 +210,9 @@ def parse_comments(response):
 def func_get_comments(video_id):
     start = time.time()
     # video_id = extract_video_id(video_link)
-    response = extract_comments(video_id)
-    data = parse_comments(response)
+    # ytDetails_response = extract_video_detail(video_id)
+    comments_response = extract_comments(video_id)
+    data = parse_comments(comments_response)
     end = time.time()
 
     logging.info(f'Comment Extraction [{video_id}]: Time taken: {end- start:.2f}s')
@@ -167,11 +220,13 @@ def func_get_comments(video_id):
 
 def main():
     # user_input = input("Enter the youtube video link: ")
-    user_input = 'https://youtu.be/cZiEtknJ5KE?si=PKSQGPvVxrmrsX_t'
+    user_input = 'https://youtu.be/j5168Ug7DvA?si=PdAny4VQyKW3ry89'
     video_id = extract_video_id(user_input)
     response = extract_comments(video_id)
-    data = parse_comments(response)
+    data= parse_comments(response)
+    yt_details = extract_video_detail(video_id)
     print(data)
+    print(yt_details)
 
 if __name__ == "__main__":
     main()

@@ -4,7 +4,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
+# API_URL = "http://localhost:8080"
+# API_URL = "http://localhost:8080"
 API_URL = "http://127.0.0.1:8000"
+
 
 st.title("YouTube Comment Analyzer + RAG Q&A")
 
@@ -31,6 +34,7 @@ if st.button("Analyze Video"):
     else:
         with st.spinner("Extracting comments and performing analysis..."):
             response = requests.post(f"{API_URL}/analyze", params={"youtube_link": link})
+            # response = requests.post(f"{API_URL}/analyze",json={"youtube_link": link})
 
             if response.status_code == 200:
                 st.session_state.analysis_data = response.json()

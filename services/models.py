@@ -2,24 +2,23 @@ from transformers import pipeline
 import os
 import sys
 import pickle as pkl
+import config
 
 def load_sentiment_model():
-    local_path = r"C:\Users\Admin\.cache\huggingface\hub\models--cardiffnlp--twitter-roberta-base-sentiment\snapshots"
-    
-    folder = [os.path.join(local_path, f) for f in os.listdir(local_path)][0]
-    model = pipeline("sentiment-analysis", model=folder, truncation=True, max_length=512)
+    local_path = config.MODELS_DIR / "sentiment_model"
+    model = pipeline("sentiment-analysis", model=str(local_path), truncation=True, max_length=512)
 
     return model
 
 def load_emotion_model():
-    local_path = r"C:\Users\Admin\.cache\huggingface\hub\models--j-hartmann--emotion-english-distilroberta-base\snapshots\manual_download"
+    local_path = config.MODELS_DIR / "emotion_model"
     # folder = [os.path.join(local_path, f) for f in os.listdir(local_path)][0]
-    model = pipeline("text-classification", model=local_path, max_length=512, truncation=True)
+    model = pipeline("text-classification", model=str(local_path), max_length=512, truncation=True)
     # takes first two scores
     return model
 
 def load_spam_model():
-    model_path = 'models\spam_classifier_model.pkl'
+    model_path = config.MODELS_DIR / "spam_detection" / "spam_classifier_model.pkl"
     with open(model_path, 'rb') as f:
         model = pkl.load(f)
         return model
@@ -35,7 +34,7 @@ if __name__ == "__main__":
         "It was okay, nothing special."
     ]
 
-    results = emotion_model(test_comments)
+    results = load_sentiment_model(test_comments)
 
     # print nicely
     for comment, res in zip(test_comments, results):

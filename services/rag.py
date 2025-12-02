@@ -1,7 +1,8 @@
 from vector_db.vectordb import VectorDB
+from services.yt_comments import extract_video_detail
 
 from tenacity import retry, stop_after_attempt, wait_exponential
-
+import config
 import pandas as pd
 import numpy as np
 import os
@@ -13,14 +14,7 @@ import time
 from google import genai
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
-import config
 #  Logging Setup 
-from pathlib import Path
-
-LOG_FILE = Path("logs/app.log")
-LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
-
-log_file = LOG_FILE
 
 logging.basicConfig(
     level=logging.INFO,
@@ -125,7 +119,9 @@ def generate_llm_response(prompt):
     return resp.text
 
 
-def rag_prompt(user_query, search_results):
+def rag_prompt(video_id, user_query, search_results):
+    video_details = extract_video_detail(video_id)
+
     context = "\n\n".join([r["chunk"] for r in search_results])
 
     return f"""
@@ -137,6 +133,12 @@ CONTEXT:
 QUESTION:
 {user_query}
 
+YT_VIDEO details:
+Video Title: {video_details.get('title', "N/A")}
+Channel: {video_details.get('channel_Name', "N/A")}
+Uploaded On: {video_details.get('publishedAt', "N/A")}
+Description: {video_details.get('description', "N/A")}
+
 INSTRUCTIONS:
 - Use ONLY the context.
 - Do NOT hallucinate.
@@ -144,17 +146,23 @@ INSTRUCTIONS:
 """.strip()
 
 
-def run_rag(user_query, vector_db, embedding_model=EMBEDDING_MODEL, top_k=5):
+def embed_query(query: str):
+    clean_q = preprocess_comments(query)
+    return EMBEDDING_MODEL.encode([clean_q], convert_to_numpy=True)[0]
+
+
+
+def run_rag(video_id, user_query, vector_db, embedding_model=EMBEDDING_MODEL, top_k=5):
     start = time.time()
-    query_emb = embedding_chunks(user_query)
-    retrieved = vector_db.search(query_emb, top_k)
-    prompt = rag_prompt(user_query, retrieved)
+    query_emb = embed_query(user_query)
+    retrieved_chunks = vector_db.search(query_emb, top_k )
+    prompt = rag_prompt(video_id, user_query, retrieved_chunks)
     answer = generate_llm_response(prompt)
     end = time.time()
 
     logger.info(f"Full RAG pipeline executed in {end - start:.2f}s")
     # logger.info(f"RAG answer: {retrieved}")
-    return {"answer": answer, "chunks_used": retrieved}
+    return {"answer": answer, "chunks_used": [c["chunk"] for c in retrieved_chunks]}
 
 
 #  TESTING 

@@ -1,0 +1,11 @@
+__pycache__/
+logs/
+*.csv
+.ipynb_checkpoints/
+.env
+venv/
+myenv/
+datasets/
+.git/
+notebooks/
+models/
