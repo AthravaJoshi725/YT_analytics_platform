@@ -124,8 +124,6 @@ async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
 
     return analysis_result
 
-
-
 @app.post("/ask")
 async def ask_question(youtube_link: str, user_query: str):
     video_id = extract_video_id(youtube_link)
