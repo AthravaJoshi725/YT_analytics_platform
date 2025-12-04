@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commentary – YouTube Comment RAG</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="logo-dot"></div>
+                <span class="brand-name">Commentary</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link">Docs</a>
+                <a href="#" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="hero">
+            <h1 class="hero-title">Ask your YouTube comments anything.</h1>
+            <p class="hero-subtitle">
+                Paste a video link, let Commentary build a RAG index over the comments,
+                then chat with an AI about what viewers really think.
+            </p>
+        </section>
+
+        <section class="card layout-grid">
+            <div class="column">
+                <h2 class="section-title">1. Add a YouTube link</h2>
+                <form id="link-form" class="link-form">
+                    <label for="youtube-link" class="field-label">YouTube video URL</label>
+                    <div class="input-row">
+                        <input
+                            id="youtube-link"
+                            name="youtube-link"
+                            type="url"
+                            required
+                            placeholder="https://www.youtube.com/watch?v=..."
+                            class="input"
+                        />
+                        <button type="submit" class="button primary" id="analyze-btn">
+                            Analyze comments
+                        </button>
+                    </div>
+                    <p class="field-hint">
+                        Commentary will fetch comments, chunk them, and build a vector index.
+                    </p>
+                </form>
+
+                <div id="status-panel" class="status-panel hidden">
+                    <div class="status-row">
+                        <div class="spinner small" id="main-spinner"></div>
+                        <div>
+                            <p id="status-title" class="status-title">
+                                Preparing RAG index…
+                            </p>
+                            <p id="status-text" class="status-text">
+                                Downloading comments, cleaning text, and building embeddings.
+                                This can take 30–90 seconds for longer videos.
+                            </p>
+                        </div>
+                    </div>
+                    <p id="status-error" class="status-error hidden"></p>
+                </div>
+
+                <div id="video-details" class="video-details hidden">
+                    <div class="video-meta">
+                        <img id="video-thumbnail" class="video-thumb" alt="Video thumbnail" />
+                        <div>
+                            <h3 id="video-title" class="video-title"></h3>
+                            <p class="video-line">
+                                <span id="video-channel"></span> ·
+                                <span id="video-date"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <p id="video-description" class="video-description"></p>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2 class="section-title">2. Chat with the comments</h2>
+
+                <div id="chat-card" class="chat-card disabled">
+                    <div class="chat-header">
+                        <span class="chat-status-dot" id="chat-status-dot"></span>
+                        <span id="chat-status-text">Waiting for RAG to be ready…</span>
+                    </div>
+
+                    <div id="chat-history" class="chat-history">
+                        <div class="chat-message ai">
+                            <div class="bubble">
+                                Drop a YouTube link on the left. Once the index is ready,
+                                you can ask things like:
+                                <ul class="inline-list">
+                                    <li>“What do people like most about this video?”</li>
+                                    <li>“Any complaints about the audio or pacing?”</li>
+                                    <li>“Summarize the top 5 themes in the comments.”</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="chat-form" class="chat-form">
+                        <input
+                            id="user-query"
+                            type="text"
+                            class="input"
+                            placeholder="Ask about the comments…"
+                            autocomplete="off"
+                            disabled
+                        />
+                        <button type="submit" class="button secondary" id="send-btn" disabled>
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>Commentary · Explore what your audience is really saying.</span>
+            <span class="footer-right">
+                <a href="#" class="footer-link">GitHub</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+

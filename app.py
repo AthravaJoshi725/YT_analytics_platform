@@ -4,8 +4,7 @@ from fastapi import BackgroundTasks
 from contextlib import asynccontextmanager
 from collections import Counter
 
-from services.yt_comments import func_get_comments, extract_video_id
-from services.analysis import get_analysis, check_nltk_data
+from services.yt_comments import func_get_comments, extract_video_id, extract_video_detail
 from services.rag import create_rag, run_rag
 from cachetools import TTLCache
 
@@ -26,19 +25,12 @@ logging.basicConfig(
 
 
 # cache for analysis results upto 10 videos for 30 minutes
-analysis_cache = TTLCache(maxsize=10, ttl=1800)
+# analysis_cache = TTLCache(maxsize=10, ttl=1800)
 rag_cache = TTLCache(maxsize=5, ttl=1800)
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Startup code
-    check_nltk_data()
-    logging.info("nltk data check completed.")
 
-    yield  
-
-app = FastAPI(lifespan=lifespan, title="Youtube Comment Analyzer")
+app = FastAPI(title="Youtube Comment Analyzer")
 
 
 
@@ -55,17 +47,6 @@ def run_rag_background(comments, video_id):
 
 
 
-def get_percentage(labels):
-    '''
-    labels : list 
-    return : dict {label: percentage} 
-    '''
-    counts = Counter(label for label in labels)
-    total = sum(counts.values())
-    percentages = {k: round(v / total * 100, 2) for k, v in counts.items()}
-    return percentages
-
-
 @app.post("/get_comments/")
 async def get_comments(youtube_link: str):
     video_id = extract_video_id(youtube_link)
@@ -73,16 +54,25 @@ async def get_comments(youtube_link: str):
     return {"total_comments": len(comments_data), "comments": comments_data.to_dict(orient="records")}
 
 
-
 @app.post("/analyze")
-async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
+async def analyze(youtube_link: str):
+    """
+    video_details = {
+            "title": item.get("title"),
+            "channelName": item.get("channelTitle"),
+            "description": item.get("description"),
+            "publishedAt": item.get("publishedAt"),
+            # dimension of thumnbnail w:1280 h:720
+            "thumbnail": item['thumbnails']['maxres'].get("url")
+            }
+    """
+
+
     # get video_id
     video_id = extract_video_id(youtube_link)
 
-    # fetch analysis from cache
-    if video_id in analysis_cache:
-        logging.info(f'Analysis extracted from cache for {video_id}')
-        return analysis_cache[video_id]
+    # extract video details
+    video_details = extract_video_detail(video_id)
 
     # if not extract comments and store in dataframe
     df = func_get_comments(video_id)
@@ -95,34 +85,12 @@ async def analyze(youtube_link: str, background_tasks: BackgroundTasks):
 
     # storing rag db in cache
     if video_id not in rag_cache:
-        background_tasks.add_task(run_rag_background, comments_data, video_id)
-        logging.info(f"Rag background task started for {video_id}")
-        
-    # get analysis
-    sentiment_result, emotion_result, spam_result, adjectives = get_analysis(comments_data)
-    sentiment_distribution = get_percentage(sentiment_result)
-    emotion_distribution = get_percentage(emotion_result)
-    spam_distribution = get_percentage(spam_result)
+        db = create_rag(comments_data)
+        rag_cache[video_id] = db
+        logging.info(f"Rag task completed  and saved in cache for {video_id}")
+    
+    return video_details
 
-    # get adjectives for word cloud
-
-    # add to dataframe
-    # df['sentiment'] = sentiment_result
-    # df['emotion'] = emotion_result
-    # df['spam'] = spam_result
-
-    analysis_result  = {
-        "Sentiment": sentiment_distribution,
-        "Emotion": emotion_distribution,
-        "Spam_detection": spam_distribution,
-        "Adjectives": adjectives
-    }
-
-    analysis_cache[video_id] = analysis_result
-    logging.info(f'Analysis stored in cache for videoID: {video_id}')
-    logging.info(f'Analysis completed for videoID: {video_id}')
-
-    return analysis_result
 
 @app.post("/ask")
 async def ask_question(youtube_link: str, user_query: str):

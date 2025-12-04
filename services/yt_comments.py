@@ -84,7 +84,9 @@ def extract_video_detail(video_id):
             "title": item.get("title"),
             "channelName": item.get("channelTitle"),
             "description": item.get("description"),
-            "publishedAt": item.get("publishedAt")
+            "publishedAt": item.get("publishedAt"),
+            # dimension of thumnbnail w:1280 h:720
+            "thumbnail": item['thumbnails']['maxres'].get("url")
             }
         
         yt_details_cache[video_id] = video_details
@@ -230,3 +232,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#  python -m services.yt_comments   
