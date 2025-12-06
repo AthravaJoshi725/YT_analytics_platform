@@ -89,12 +89,12 @@ async def analyze(youtube_link: str):
         rag_cache[video_id] = db
         logging.info(f"Rag task completed  and saved in cache for {video_id}")
     
+    video_details['video_id'] = video_id
     return video_details
 
 
 @app.post("/ask")
-async def ask_question(youtube_link: str, user_query: str):
-    video_id = extract_video_id(youtube_link)
+async def ask_question(video_id: str, user_query: str):
     if video_id not in rag_cache:
         return {"error": "Rag not ready yet. Try again after a few seconds."}
     

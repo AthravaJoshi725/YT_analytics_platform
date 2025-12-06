@@ -14,6 +14,12 @@ if "rag_ready" not in st.session_state:
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
+if "video_details" not in st.session_state:
+    st.session_state.video_details = None
+
+if "video_id" not in st.session_state:
+    st.session_state.video_id = None
+
 
 # --------------------------
 # INPUT: YOUTUBE LINK
@@ -24,15 +30,35 @@ if st.button("Analyze"):
     if not yt_link:
         st.error("Please enter a YouTube link.")
     else:
-        with st.spinner("Extracting comments and building RAG..."):
+        with st.spinner("Extracting comments + creating RAG..."):
             res = requests.post(f"{API_URL}/analyze", params={"youtube_link": yt_link})
 
-            if res.status_code == 200 and res.json() == True:
-                st.success("RAG is ready! You can now ask questions.")
+            if res.status_code == 200:
+                response = res.json()
+
+                st.session_state.video_details = response
+                st.session_state.video_id = response.get("video_id")   # <-- FIXED
                 st.session_state.rag_ready = True
-                st.session_state.chat_history = []  # reset chat
+                st.session_state.chat_history = []
+
+                st.success("RAG is ready! You can now ask questions.")
             else:
-                st.error("Failed to create RAG. Try again later.")
+                st.error("Failed to analyze the video.")
+
+
+# --------------------------
+# SHOW VIDEO DETAILS
+# --------------------------
+if st.session_state.video_details:
+    vd = st.session_state.video_details
+
+    st.markdown("### 🎬 Video Information")
+    st.image(vd.get("thumbnail"), width=400)
+
+    st.write(f"**Title:** {vd.get('title')}")
+    st.write(f"**Channel:** {vd.get('channelName')}")
+    st.write(f"**Published:** {vd.get('publishedAt')}")
+    # st.write(f"**Description:** {vd.get('description')}")
 
 
 # --------------------------
@@ -52,7 +78,7 @@ if st.session_state.rag_ready:
                 res = requests.post(
                     f"{API_URL}/ask",
                     params={
-                        "youtube_link": yt_link,
+                        "video_id": st.session_state.video_id,   # <-- FIXED
                         "user_query": user_query
                     }
                 )
@@ -62,7 +88,7 @@ if st.session_state.rag_ready:
                     st.session_state.chat_history.append(("You", user_query))
                     st.session_state.chat_history.append(("AI", answer))
                 else:
-                    st.error("RAG not ready or backend error.")
+                    st.error("Backend error or RAG not ready.")
 
 
 # --------------------------
