@@ -37,7 +37,7 @@ if st.button("Analyze"):
                 response = res.json()
 
                 st.session_state.video_details = response
-                st.session_state.video_id = response.get("video_id")   # <-- FIXED
+                st.session_state.video_id = response.get("video_id")   
                 st.session_state.rag_ready = True
                 st.session_state.chat_history = []
 
@@ -78,7 +78,7 @@ if st.session_state.rag_ready:
                 res = requests.post(
                     f"{API_URL}/ask",
                     params={
-                        "video_id": st.session_state.video_id,   # <-- FIXED
+                        "video_id": st.session_state.video_id,   
                         "user_query": user_query
                     }
                 )

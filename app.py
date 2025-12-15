@@ -1,8 +1,5 @@
 from fastapi import FastAPI
-from fastapi import BackgroundTasks
-
-from contextlib import asynccontextmanager
-from collections import Counter
+from fastapi.middleware.cors import CORSMiddleware
 
 from services.yt_comments import func_get_comments, extract_video_id, extract_video_detail
 from services.rag import create_rag, run_rag
@@ -10,7 +7,6 @@ from cachetools import TTLCache
 
 import config
 import logging
-import os
 
 
 logging.basicConfig(
@@ -33,6 +29,14 @@ rag_cache = TTLCache(maxsize=5, ttl=1800)
 app = FastAPI(title="Youtube Comment Analyzer")
 
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 def run_rag_background(comments, video_id):
     '''
@@ -44,6 +48,15 @@ def run_rag_background(comments, video_id):
 
     rag_cache[video_id] = db
     logging.info(f"RAG background task completed -  db saved in cache for {video_id}")
+
+
+@app.get("/")
+async def root():
+    return {"status": "ok", "message": "API is running"}
+
+@app.get("/health")
+async def health():
+    return {"status": "healthy"}
 
 
 
