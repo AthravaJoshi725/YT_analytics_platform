@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 API_KEY = os.environ.get("GENAI_API_KEY", None)
 
-EMBEDDING_MODEL = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+EMBEDDING_MODEL = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 client = None
 if API_KEY:
@@ -79,7 +79,7 @@ def chunk_comments(comments, max_words=200):
 
 def embedding_chunks(chunks, embedding_model=EMBEDDING_MODEL):
     start = time.time()
-    embeddings = embedding_model.encode(chunks, convert_to_numpy=True, batch_size=32)
+    embeddings = embedding_model.encode(chunks, convert_to_numpy=True, batch_size=8)
     end = time.time()
 
     logger.info(
