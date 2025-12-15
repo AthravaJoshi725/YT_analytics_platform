@@ -24,8 +24,8 @@ RUN rm -rf /root/.cache/* && pip cache purge
 # Copy application code
 COPY . .
 
-# Expose port (Railway will override this with $PORT)
-EXPOSE 8000
+EXPOSE 7860
 
 # CMD uvicorn app:app --host 0.0.0.0 --port ${PORT}
-CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port $PORT"]
+# CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port $PORT"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]

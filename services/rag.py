@@ -3,10 +3,7 @@ from services.yt_comments import extract_video_detail
 
 from tenacity import retry, stop_after_attempt, wait_exponential
 import config
-import pandas as pd
-import numpy as np
 import os
-import json
 import re
 import logging
 import time
@@ -26,7 +23,6 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-
 
 #  Load Models & API 
 load_dotenv()
@@ -99,7 +95,6 @@ def create_rag(comments, max_words=200):
 
     db = VectorDB(embeddings.shape[1])
     db.add_all(chunks, embeddings)
-
     logger.info("VectorDB created successfully.")
     return db
 
@@ -162,6 +157,7 @@ def run_rag(video_id, user_query, vector_db, embedding_model=EMBEDDING_MODEL, to
 
     logger.info(f"Full RAG pipeline executed in {end - start:.2f}s")
     # logger.info(f"RAG answer: {retrieved}")
+
     return {"answer": answer, "chunks_used": [c["chunk"] for c in retrieved_chunks]}
 
 
