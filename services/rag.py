@@ -105,7 +105,8 @@ def generate_llm_response(prompt):
 
     start = time.time()
     resp = client.models.generate_content(
-        model="gemini-2.0-flash",
+        # model="gemini-2.0-flash",
+        model = "gemini-2.5-flash-lite",
         contents=[prompt],
     )
     end = time.time()
